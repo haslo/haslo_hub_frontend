@@ -5,12 +5,12 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import NewsPost from "./NewsPost";
+import {Container, Grid} from "@mui/material";
+import NewsPostCard from "./NewsPostCard";
 
 function App() {
 
   const [newsPosts, setNewsPosts] = useState(null);
-  const [apiErrors, setApiErrors] = useState(null);
   const [query] = useState(`
   {
     newsPostCollection {
@@ -19,6 +19,7 @@ function App() {
         shortTitle,
         description,
         originalUrl,
+        publicationDate,
         thumbnailImage {
           contentType
           url
@@ -51,7 +52,6 @@ function App() {
       .then(({data, errors}) => {
         if (errors) {
           console.error(errors);
-          setApiErrors(errors.toString());
         }
         setNewsPosts(data.newsPostCollection.items);
       });
@@ -60,17 +60,20 @@ function App() {
   if (!newsPosts) {
     return (
       <div className="App">
-        Loading...<br/>
-        {apiErrors}
+        Loading...
       </div>
     );
   }
 
   return (
     <div className="App">
-      {newsPosts.map(newsPost => (
-        <NewsPost newsPost={newsPost} key={newsPost.originalUrl}></NewsPost>
-      ))}
+      <Container sx={{marginX: 10, marginY: 10}}>
+        <Grid container spacing={5}>
+          {newsPosts.map(newsPost => (
+            <NewsPostCard newsPost={newsPost} key={newsPost.originalUrl}></NewsPostCard>
+          ))}
+        </Grid>
+      </Container>
     </div>
   );
 }
