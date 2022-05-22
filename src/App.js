@@ -1,11 +1,11 @@
-import './App.css';
-
 import {useState, useEffect} from "react";
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
+import NewsPost from "./NewsPost";
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
     newsPostCollection {
       items {
         title,
+        shortTitle,
         description,
         originalUrl,
         thumbnailImage {
@@ -24,6 +25,7 @@ function App() {
         },
         type {
           title,
+          channelTitle,
           channelUrl,
           icon {
             contentType
@@ -67,9 +69,7 @@ function App() {
   return (
     <div className="App">
       {newsPosts.map(newsPost => (
-        <div className="news-post">
-          {newsPost.title}
-        </div>
+        <NewsPost newsPost={newsPost} key={newsPost.originalUrl}></NewsPost>
       ))}
     </div>
   );
