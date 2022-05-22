@@ -1,3 +1,5 @@
+import './App.css';
+
 import {useState, useEffect} from "react";
 
 import '@fontsource/roboto/300.css';
