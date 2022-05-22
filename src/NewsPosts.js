@@ -65,7 +65,7 @@ function NewsPosts() {
 
   return (
     <Container fixed>
-      <Grid container>
+      <Grid container rowSpacing={2}>
         {newsPosts.map(newsPost => (
           <Grid item xs={12} md={6} lg={4} spacing={3}>
             <NewsPostCard newsPost={newsPost} key={newsPost.originalUrl}></NewsPostCard>
