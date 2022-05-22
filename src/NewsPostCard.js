@@ -10,7 +10,7 @@ import {CardActionArea} from "@mui/material";
 
 export default function NewsPostCard({newsPost}) {
   return (
-    <Card sx={{maxWidth: 345, paddingX: 1}}>
+    <Card sx={{paddingX: 1}}>
       <CardActionArea href={newsPost.originalUrl}>
         <CardHeader
           avatar={
