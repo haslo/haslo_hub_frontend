@@ -5,16 +5,31 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import {createTheme} from '@mui/material/styles';
+import {ThemeProvider} from "@mui/material";
+
 import SearchAppBar from "./SearchAppBar";
 import NewsPosts from "./NewsPosts";
 
 function App() {
 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#221a56',
+      },
+      secondary: {
+        main: '#f50057',
+      },
+    },
+  });
+
   return (
     <div className="App">
-      <SearchAppBar/>
-      &nbsp;
-      <NewsPosts />
+      <ThemeProvider theme={theme}>
+        <SearchAppBar/>
+        <NewsPosts style={{marginTop: '50px'}}/>
+      </ThemeProvider>
     </div>
   );
 }
