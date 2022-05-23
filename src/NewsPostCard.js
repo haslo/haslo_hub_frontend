@@ -11,14 +11,16 @@ import {CardActionArea} from "@mui/material";
 export default function NewsPostCard({newsPost}) {
   return (
     <Card sx={{paddingX: 1}}>
-      <CardActionArea href={newsPost.originalUrl}>
-        <CardHeader
-          avatar={
+      <CardHeader
+        avatar={
+          <a href={newsPost.type.channelUrl}>
             <Avatar variant="rounded" src={newsPost.type.icon.url}/>
-          }
-          title={newsPost.title}
-          subheader={format(new Date(newsPost.publicationDate), 'yyyy-MM-dd')}
-        />
+          </a>
+        }
+        title={newsPost.title}
+        subheader={format(new Date(newsPost.publicationDate), 'yyyy-MM-dd')}
+      />
+      <CardActionArea href={newsPost.originalUrl}>
         <CardMedia
           component="img"
           height="194"
