@@ -11,23 +11,29 @@ function NewsPosts() {
   {
     newsPostCollection {
       items {
-        title,
-        shortTitle,
-        description,
-        originalUrl,
-        publicationDate,
+        title
+        shortTitle
+        description
+        originalUrl
+        publicationDate
         thumbnailImage {
           contentType
           url
-        },
+        }
         type {
-          title,
-          channelTitle,
-          channelUrl,
+          title
+          channelTitle
+          channelUrl
           icon {
             contentType
             url
           }
+          sys {
+            id
+          }
+        }
+        sys {
+          id
         }
       }
     }
@@ -68,7 +74,7 @@ function NewsPosts() {
       <Grid container rowSpacing={2}>
         {newsPosts.map(newsPost => (
           <Grid item xs={12} md={6} lg={4} spacing={3}>
-            <NewsPostCard newsPost={newsPost} key={newsPost.originalUrl}></NewsPostCard>
+            <NewsPostCard newsPost={newsPost} key={newsPost.sys.id}></NewsPostCard>
           </Grid>
         ))}
       </Grid>
