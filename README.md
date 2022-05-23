@@ -12,11 +12,10 @@
 
 ## 3rd Party APIs
 
-Different repo, connecting to:
+See [the syncer backend repo](https://github.com/haslo/haslo_hub_syncer), connecting to:
 
 * YouTube
 * Soundcloud
 * Instagram
 
-Using [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/)
-for connecting to / filling Contentful
+Using [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/) for connecting to / filling Contentful
