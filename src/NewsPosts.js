@@ -15,6 +15,7 @@ function NewsPosts() {
         shortTitle
         description
         originalUrl
+        remoteId
         publicationDate
         thumbnailImage {
           contentType
