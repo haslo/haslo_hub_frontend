@@ -9,7 +9,7 @@ function NewsPosts() {
   const [newsPosts, setNewsPosts] = useState(null);
   const [query] = useState(`
   {
-    newsPostCollection {
+    newsPostCollection(order: [publicationDate_DESC, title_ASC]) {
       items {
         title
         shortTitle
