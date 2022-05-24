@@ -17,6 +17,7 @@ function NewsPosts() {
         originalUrl
         remoteId
         publicationDate
+        isVideo
         thumbnailImage {
           contentType
           url
