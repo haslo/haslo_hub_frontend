@@ -53,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
   },
 }));
 
-export default function SearchAppBar({searchQuery, setSearchQuery}) {
+export default function SearchAppBar({setSearchQuery, setIsFiltering}) {
   const [timer, setTimer] = useState(null);
 
   return (
@@ -78,6 +78,7 @@ export default function SearchAppBar({searchQuery, setSearchQuery}) {
               placeholder="Search…"
               inputProps={{'aria-label': 'search'}}
               onChange={(event) => {
+                setIsFiltering(true);
                 if (timer) {
                   clearTimeout(timer);
                   setTimer(null);
@@ -85,6 +86,7 @@ export default function SearchAppBar({searchQuery, setSearchQuery}) {
                 setTimer(
                   setTimeout(() => {
                     setSearchQuery(event.target.value);
+                    setIsFiltering(false);
                   }, 500)
                 );
               }}

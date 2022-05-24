@@ -16,6 +16,7 @@ import NewsPosts from "./NewsPosts";
 function App() {
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [isFiltering, setIsFiltering] = useState(false);
 
   const theme = createTheme({
     palette: {
@@ -31,8 +32,8 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <SearchAppBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-        <NewsPosts searchQuery={searchQuery} setSearchQuery={setSearchQuery} style={{marginTop: '50px'}}/>
+        <SearchAppBar setSearchQuery={setSearchQuery} setIsFiltering={setIsFiltering}/>
+        <NewsPosts searchQuery={searchQuery} isFiltering={isFiltering} style={{marginTop: '50px'}}/>
       </ThemeProvider>
     </div>
   );

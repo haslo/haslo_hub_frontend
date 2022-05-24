@@ -4,7 +4,7 @@ import {Container, Grid} from "@mui/material";
 import NewsPostCard from "./NewsPostCard";
 import Typography from "@mui/material/Typography";
 
-function NewsPosts({searchQuery, setSearchQuery}) {
+function NewsPosts({searchQuery, isFiltering}) {
 
   const [newsPosts, setNewsPosts] = useState(null);
 
@@ -75,7 +75,7 @@ function NewsPosts({searchQuery, setSearchQuery}) {
     );
   }
 
-  const matchesSearch = (newsPost) => {
+  const filteredPosts = newsPosts.filter((newsPost) => {
     if (searchQuery === '') {
       return true;
     } else {
@@ -83,19 +83,29 @@ function NewsPosts({searchQuery, setSearchQuery}) {
         newsPost.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         newsPost.type.title.toLowerCase().includes(searchQuery.toLowerCase())
     }
-  }
+  });
 
-  return (
-    <Container fixed style={{marginTop: '100px'}}>
-      <Grid container spacing={3} rowSpacing={2}>
-        {newsPosts.filter(matchesSearch).map(newsPost => (
-          <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
-            <NewsPostCard newsPost={newsPost}></NewsPostCard>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
-  );
+  if (filteredPosts.length > 0) {
+    return (
+      <Container fixed style={{marginTop: '100px', transition: '1s', filter: isFiltering ? 'blur(5px)' : 'inherit'}}>
+        <Grid container spacing={3} rowSpacing={2}>
+          {filteredPosts.map(newsPost => (
+            <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
+              <NewsPostCard newsPost={newsPost}></NewsPostCard>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    );
+  } else {
+    return (
+      <Container fixed style={{marginTop: '100px'}}>
+        <Typography variant='h4' align='center' sx={{color: 'white'}}>
+          No results for "{searchQuery}", sorry!
+        </Typography>
+      </Container>
+    );
+  }
 }
 
 export default NewsPosts;
