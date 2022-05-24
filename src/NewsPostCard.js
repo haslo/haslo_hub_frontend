@@ -29,7 +29,7 @@ export default function NewsPostCard({newsPost}) {
         title={newsPost.title}
         subheader={format(new Date(newsPost.publicationDate), 'yyyy-MM-dd')}
       />
-      <CardActionArea href={newsPost.originalUrl}>
+      <CardActionArea href={newsPost.originalUrl} target='_blank'>
         <Box sx={{position: 'relative'}}>
           <CardMedia
             component="img"
