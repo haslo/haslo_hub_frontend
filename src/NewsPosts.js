@@ -42,6 +42,10 @@ function NewsPosts() {
   `)
 
   useEffect(() => {
+    // Is this a token in the repository?
+    // yes, it is - it's a read-only token for published CMS content,
+    // which the client also uses to make a request from the browser the SPA is running in.
+    // So go ahead and steal it, it's yours anyway :)
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/wehngbocf979/`, {
         method: "POST",

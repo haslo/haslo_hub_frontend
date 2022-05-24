@@ -71,7 +71,7 @@ export default function SearchAppBar() {
             component="div"
             sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
           >
-            haslo.ch - Guido's Content Hub
+            haslo.ch - Guido's Content Portal
           </Typography>
         </Toolbar>
       </AppBar>
