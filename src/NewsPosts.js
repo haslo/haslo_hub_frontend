@@ -20,6 +20,7 @@ function NewsPosts({searchQuery, isFiltering}) {
           remoteId
           publicationDate
           isVideo
+          isAudio
           thumbnailImage {
             contentType
             url

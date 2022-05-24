@@ -15,6 +15,7 @@ import {
 
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ImageIcon from '@mui/icons-material/Image';
+import HeadphonesIcon from '@mui/icons-material/Headphones';
 
 export default function NewsPostCard({newsPost}) {
   return (
@@ -61,7 +62,9 @@ export default function NewsPostCard({newsPost}) {
             {
               newsPost.isVideo ?
                 <PlayCircleOutlineIcon sx={{fontSize: '100px'}}/> :
-                <ImageIcon sx={{fontSize: '100px'}}/>
+                newsPost.isAudio ?
+                  <HeadphonesIcon sx={{fontSize: '100px'}}/> :
+                  <ImageIcon sx={{fontSize: '100px'}}/>
             }
           </Box>
         </Box>
