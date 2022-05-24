@@ -1,12 +1,14 @@
 import * as React from 'react';
+import {useState} from "react";
+
 import {styled, alpha} from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
+import {
+  AppBar,
+  Box,
+  InputBase,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({theme}) => ({
@@ -51,16 +53,9 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
   },
 }));
 
-export default function SearchAppBar() {
-  const search = <Search>
-    <SearchIconWrapper>
-      <SearchIcon/>
-    </SearchIconWrapper>
-    <StyledInputBase
-      placeholder="Search…"
-      inputProps={{'aria-label': 'search'}}
-    />
-  </Search>
+export default function SearchAppBar({searchQuery, setSearchQuery}) {
+  const [timer, setTimer] = useState(null);
+
   return (
     <Box sx={{flexGrow: 1}}>
       <AppBar position="fixed" color="primary">
@@ -75,6 +70,26 @@ export default function SearchAppBar() {
               haslo.ch - haslo's Content Portal
             </a>
           </Typography>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon/>
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{'aria-label': 'search'}}
+              onChange={(event) => {
+                if (timer) {
+                  clearTimeout(timer);
+                  setTimer(null);
+                }
+                setTimer(
+                  setTimeout(() => {
+                    setSearchQuery(event.target.value);
+                  }, 500)
+                );
+              }}
+            />
+          </Search>
         </Toolbar>
       </AppBar>
     </Box>

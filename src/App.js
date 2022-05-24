@@ -1,5 +1,7 @@
 import './App.css';
 
+import {useState} from "react";
+
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -12,6 +14,8 @@ import SearchAppBar from "./SearchAppBar";
 import NewsPosts from "./NewsPosts";
 
 function App() {
+
+  const [searchQuery, setSearchQuery] = useState('');
 
   const theme = createTheme({
     palette: {
@@ -27,8 +31,8 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <SearchAppBar/>
-        <NewsPosts style={{marginTop: '50px'}}/>
+        <SearchAppBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+        <NewsPosts searchQuery={searchQuery} setSearchQuery={setSearchQuery} style={{marginTop: '50px'}}/>
       </ThemeProvider>
     </div>
   );

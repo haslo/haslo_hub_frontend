@@ -4,45 +4,45 @@ import {Container, Grid} from "@mui/material";
 import NewsPostCard from "./NewsPostCard";
 import Typography from "@mui/material/Typography";
 
-function NewsPosts() {
+function NewsPosts({searchQuery, setSearchQuery}) {
 
   const [newsPosts, setNewsPosts] = useState(null);
-  const [query] = useState(`
-  {
-    newsPostCollection(order: [publicationDate_DESC, title_ASC]) {
-      items {
-        title
-        shortTitle
-        description
-        originalUrl
-        remoteId
-        publicationDate
-        isVideo
-        thumbnailImage {
-          contentType
-          url
-        }
-        type {
+
+  useEffect(() => {
+    const query = `
+    {
+      newsPostCollection(order: [publicationDate_DESC, title_ASC]) {
+        items {
           title
-          channelTitle
-          channelUrl
-          icon {
+          shortTitle
+          description
+          originalUrl
+          remoteId
+          publicationDate
+          isVideo
+          thumbnailImage {
             contentType
             url
+          }
+          type {
+            title
+            channelTitle
+            channelUrl
+            icon {
+              contentType
+              url
+            }
+            sys {
+              id
+            }
           }
           sys {
             id
           }
         }
-        sys {
-          id
-        }
       }
     }
-  }
-  `)
-
-  useEffect(() => {
+    `
     // Is this a token in the repository?
     // yes, it is - it's a read-only token for published CMS content,
     // which the client also uses to make a request from the browser the SPA is running in.
@@ -63,23 +63,33 @@ function NewsPosts() {
         }
         setNewsPosts(data.newsPostCollection.items);
       });
-  }, [query]);
+  }, []);
 
   if (!newsPosts) {
     return (
-      <Container fixed>
-        <Typography>
+      <Container fixed style={{marginTop: '100px'}}>
+        <Typography variant='h4' align='center' sx={{color: 'white'}}>
           Loading...
         </Typography>
       </Container>
     );
   }
 
+  const matchesSearch = (newsPost) => {
+    if (searchQuery === '') {
+      return true;
+    } else {
+      return newsPost.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        newsPost.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        newsPost.type.title.toLowerCase().includes(searchQuery.toLowerCase())
+    }
+  }
+
   return (
     <Container fixed style={{marginTop: '100px'}}>
       <Grid container spacing={3} rowSpacing={2}>
-        {newsPosts.map(newsPost => (
-          <Grid item xs={12} sm={12} md={6} lg={4}key={newsPost.sys.id}>
+        {newsPosts.filter(matchesSearch).map(newsPost => (
+          <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
             <NewsPostCard newsPost={newsPost}></NewsPostCard>
           </Grid>
         ))}
