@@ -63,7 +63,7 @@ export default function SearchAppBar() {
   </Search>
   return (
     <Box sx={{flexGrow: 1}}>
-      <AppBar position="static" color="primary">
+      <AppBar position="fixed" color="primary">
         <Toolbar>
           <Typography
             variant="h6"
@@ -71,7 +71,9 @@ export default function SearchAppBar() {
             component="div"
             sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
           >
-            haslo.ch - Guido's Content Portal
+            <a href='/' style={{textDecoration: 'none', color: 'white'}}>
+              haslo.ch - haslo's Content Portal
+            </a>
           </Typography>
         </Toolbar>
       </AppBar>

@@ -75,7 +75,7 @@ function NewsPosts() {
   }
 
   return (
-    <Container fixed style={{marginTop: '50px'}}>
+    <Container fixed style={{marginTop: '100px'}}>
       <Grid container spacing={3} rowSpacing={2}>
         {newsPosts.map(newsPost => (
           <Grid item xs={12} sm={12} md={6} lg={4}key={newsPost.sys.id}>
