@@ -31,5 +31,3 @@ jobs:
           local-dir: ./build/
           server-dir: ${{ secrets.ftp_server_dir }}
           dangerous-clean-slate: false
-          dry-run: true
-          log-level: verbose
