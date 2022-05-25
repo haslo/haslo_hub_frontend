@@ -1,5 +1,9 @@
 # Content Hub
 
+## Architecture
+
+![haslo.ch Architecture](haslo.ch.drawio.svg)
+
 ## Backend
 
 * Contentful, headless
