@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![haslo.ch Architecture](haslo.ch.drawio.svg)
+![haslo.ch Architecture](haslo.ch.drawio.png)
 
 ## Backend
 
