@@ -11,7 +11,7 @@ function NewsPosts({searchQuery, isFiltering}) {
   useEffect(() => {
     const query = `
     {
-      newsPostCollection(order: [publicationDate_DESC, title_ASC]) {
+      newsPostCollection(order: [publicationDate_DESC, title_ASC], limit: 1000) {
         items {
           title
           shortTitle
