@@ -1,15 +1,17 @@
 import * as React from 'react';
-import {useState} from "react";
+import {useTransition} from "react";
 
 import {styled, alpha} from '@mui/material/styles';
 import {
   AppBar,
   Box,
+  CircularProgress,
   InputBase,
   Toolbar,
   Typography,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import ClearIcon from '@mui/icons-material/Clear';
 
 const Search = styled('div')(({theme}) => ({
   position: 'relative',
@@ -53,8 +55,8 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
   },
 }));
 
-export default function SearchAppBar({setSearchQuery, setIsFiltering}) {
-  const [timer, setTimer] = useState(null);
+export default function SearchAppBar({setSearchQuery}) {
+  const [searchIsPending, startSearchTransition] = useTransition();
 
   return (
     <Box sx={{flexGrow: 1}}>
@@ -70,6 +72,7 @@ export default function SearchAppBar({setSearchQuery, setIsFiltering}) {
               haslo.ch - haslo's Content Portal
             </a>
           </Typography>
+          {searchIsPending ? <CircularProgress/> : <></>}
           <Search>
             <SearchIconWrapper>
               <SearchIcon/>
@@ -78,17 +81,9 @@ export default function SearchAppBar({setSearchQuery, setIsFiltering}) {
               placeholder="Search…"
               inputProps={{'aria-label': 'search'}}
               onChange={(event) => {
-                setIsFiltering(true);
-                if (timer) {
-                  clearTimeout(timer);
-                  setTimer(null);
-                }
-                setTimer(
-                  setTimeout(() => {
-                    setSearchQuery(event.target.value);
-                    setIsFiltering(false);
-                  }, 500)
-                );
+                startSearchTransition(() => {
+                  setSearchQuery(event.target.value);
+                })
               }}
             />
           </Search>

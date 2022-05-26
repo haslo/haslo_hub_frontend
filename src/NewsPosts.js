@@ -88,7 +88,7 @@ function NewsPosts({searchQuery, isFiltering}) {
 
   if (filteredPosts.length > 0) {
     return (
-      <Container fixed style={{marginTop: '100px', transition: '1s', filter: isFiltering ? 'blur(5px)' : 'inherit'}}>
+      <Container fixed style={{marginTop: '100px'}}>
         <Grid container spacing={3} rowSpacing={2}>
           {filteredPosts.map(newsPost => (
             <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
