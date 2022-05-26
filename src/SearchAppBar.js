@@ -11,7 +11,6 @@ import {
   Typography,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import ClearIcon from '@mui/icons-material/Clear';
 
 const Search = styled('div')(({theme}) => ({
   position: 'relative',
