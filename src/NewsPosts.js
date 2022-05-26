@@ -44,26 +44,36 @@ function NewsPosts({searchQuery, isFiltering}) {
       }
     }
     `
-    // Is this a token in the repository?
-    // yes, it is - it's a read-only token for published CMS content,
-    // which the client also uses to make a request from the browser the SPA is running in.
-    // So go ahead and steal it, it's yours anyway :)
-    window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/wehngbocf979/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer ck9CqB4ydwUdbKGF6quZzIqVS0JvmlMhWQJnFSnODrA",
-        },
-        body: JSON.stringify({query}),
-      })
-      .then((response) => response.json())
-      .then(({data, errors}) => {
-        if (errors) {
-          console.error(errors);
-        }
-        setNewsPosts(data.newsPostCollection.items);
-      });
+    const fetchGraphQlData = (query, retries) => {
+      // Is this a token in the repository?
+      // yes, it is - it's a read-only token for published CMS content,
+      // which the client also uses to make a request from the browser the SPA is running in.
+      // So go ahead and steal it, it's yours anyway :)
+      window
+        .fetch(`https://graphql.contentful.com/content/v1/spaces/wehngbocf979/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer ck9CqB4ydwUdbKGF6quZzIqVS0JvmlMhWQJnFSnODrA",
+          },
+          body: JSON.stringify({query}),
+        })
+        .then((response) => response.json())
+        .then(({data, errors}) => {
+          if (errors) {
+            console.error(errors);
+            console.log(`retries ${retries}, retrying? ${retries < 5}`);
+            if (retries < 5) {
+              setTimeout(() => {
+                fetchGraphQlData(query, retries + 1);
+              }, 1000)
+            }
+          } else {
+            setNewsPosts(data.newsPostCollection.items);
+          }
+        });
+    }
+    fetchGraphQlData(query, 0);
   }, []);
 
   if (!newsPosts) {
