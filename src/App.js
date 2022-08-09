@@ -12,6 +12,7 @@ import {ThemeProvider} from "@mui/material";
 
 import SearchAppBar from "./SearchAppBar";
 import NewsPosts from "./NewsPosts";
+import SoundCloudIFrame from "./SoundCloudIFrame";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <SearchAppBar setSearchQuery={setSearchQuery}/>
+        <SoundCloudIFrame/>
         <NewsPosts searchQuery={searchQuery} style={{marginTop: '50px'}}/>
       </ThemeProvider>
     </div>
