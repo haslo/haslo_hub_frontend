@@ -85,7 +85,7 @@ export default function SearchAppBar({setSearchQuery}) {
                   setSearchQuery(searchString);
                   window.dataLayer.push({
                     event: "search_query",
-                    url: searchString,
+                    searchString: searchString,
                   });
                 })
               }}
