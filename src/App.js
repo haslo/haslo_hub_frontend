@@ -17,6 +17,7 @@ import SoundCloudIFrame from "./SoundCloudIFrame";
 function App() {
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchEventSent, setSearchEventSent] = useState(false);
 
   const theme = createTheme({
     palette: {
@@ -32,7 +33,11 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <SearchAppBar setSearchQuery={setSearchQuery}/>
+        <SearchAppBar
+          setSearchQuery={setSearchQuery}
+          searchEventSent={searchEventSent}
+          setSearchEventSent={setSearchEventSent}
+        />
         <SoundCloudIFrame/>
         <NewsPosts searchQuery={searchQuery} style={{marginTop: '50px'}}/>
       </ThemeProvider>

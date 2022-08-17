@@ -54,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
   },
 }));
 
-export default function SearchAppBar({setSearchQuery}) {
+export default function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSent}) {
   const [searchIsPending, startSearchTransition] = useTransition();
 
   return (
@@ -83,10 +83,13 @@ export default function SearchAppBar({setSearchQuery}) {
                 startSearchTransition(() => {
                   const searchString = event.target.value;
                   setSearchQuery(searchString);
-                  window.dataLayer.push({
-                    event: "search_query",
-                    searchString: searchString,
-                  });
+                  if (!searchEventSent) {
+                    window.dataLayer.push({
+                      event: "search_query",
+                      searchString: searchString,
+                    });
+                    setSearchEventSent(true);
+                  }
                 })
               }}
             />
