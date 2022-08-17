@@ -81,7 +81,12 @@ export default function SearchAppBar({setSearchQuery}) {
               inputProps={{'aria-label': 'search'}}
               onChange={(event) => {
                 startSearchTransition(() => {
-                  setSearchQuery(event.target.value);
+                  const searchString = event.target.value;
+                  setSearchQuery(searchString);
+                  window.dataLayer.push({
+                    event: "search_query",
+                    url: searchString,
+                  });
                 })
               }}
             />
