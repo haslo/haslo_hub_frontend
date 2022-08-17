@@ -85,11 +85,14 @@ export default function SearchAppBar({setSearchQuery, searchEventSent, setSearch
                   setSearchQuery(searchString);
                   if (!searchEventSent) {
                     window.dataLayer.push({
-                      event: "search_query",
-                      searchString: searchString,
+                      event: "search_start",
                     });
                     setSearchEventSent(true);
                   }
+                  window.dataLayer.push({
+                    event: "search_string",
+                    searchString: searchString,
+                  });
                 })
               }}
             />
