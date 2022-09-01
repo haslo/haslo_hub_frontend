@@ -34,7 +34,7 @@ export default function NewsPostCard({newsPost}) {
           <CardMedia
             component="img"
             height="194"
-            image={newsPost.thumbnailImage.url}
+            image={newsPost.thumbnailImage.url + '?fm=webp'}
             alt={newsPost.shortTitle}
           />
           <Box
