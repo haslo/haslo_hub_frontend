@@ -22,8 +22,8 @@ export default function NewsPostCard({newsPost}) {
     <Card sx={{paddingX: 1}}>
       <CardHeader
         avatar={
-          <a href={newsPost.type.channelUrl}>
-            <Avatar variant="rounded" src={newsPost.type.icon.url}/>
+          <a href={newsPost.type.channelUrl} name={newsPost.type.title}>
+            <Avatar variant="rounded" alt={newsPost.type.title} src={newsPost.type.icon.url}/>
           </a>
         }
         title={newsPost.title}
