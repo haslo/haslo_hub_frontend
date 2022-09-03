@@ -30,6 +30,7 @@ function NewsPosts({searchQuery, isFiltering}) {
           }
           type {
             title
+            channelDescription
             channelTitle
             channelUrl
             icon {
