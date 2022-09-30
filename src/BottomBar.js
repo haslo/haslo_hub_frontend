@@ -69,7 +69,7 @@ export default function BottomBar() {
   return (
     <Box sx={{flexGrow: 1}}>
       <AppBar position="fixed" color="primary"
-              sx={{top: 'auto', bottom: 0, display: 'flex', justifyContent: 'center', width: '100%'}}>
+              sx={{top: 'auto', bottom: 0, display: 'flex', justifyContent: 'center', width: '100%', opacity: '95%'}}>
         <Toolbar variant={'dense'} sx={{display: 'flex', justifyContent: 'center', width: 'calc(100% - 32px)'}}>
           <List style={flexContainer}>
             {newsPostTypes.map(newsPostType => (

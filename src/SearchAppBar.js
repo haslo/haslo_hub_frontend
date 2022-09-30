@@ -59,20 +59,20 @@ export default function SearchAppBar({setSearchQuery, searchEventSent, setSearch
 
   return (
     <Box sx={{flexGrow: 1}}>
-      <AppBar position="fixed" color="primary">
+      <AppBar position="fixed" color="primary" style={{opacity: '95%'}}>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
+            sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'}}}
           >
             <a href='/' style={{textDecoration: 'none', color: 'white'}}>
               haslo.ch - Hardware Techno from Bern, Switzerland
             </a>
           </Typography>
           {searchIsPending ? <CircularProgress/> : <></>}
-          <Search>
+          <Search sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}>
             <SearchIconWrapper>
               <SearchIcon/>
             </SearchIconWrapper>
