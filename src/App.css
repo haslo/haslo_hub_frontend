@@ -8,7 +8,7 @@ body {
     min-height: 100%;
     width: 100%;
     background-color: rgba(17,17,68,1);
-    background-image: url('assets/waves.png');
-    background-repeat: no-repeat;
+    background-image: url('assets/synth_components.png');
+    background-repeat: repeat-y;
     background-size: 100%;
 }
