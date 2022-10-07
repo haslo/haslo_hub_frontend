@@ -7,8 +7,6 @@ body {
     top: 0;
     min-height: 100%;
     width: 100%;
-    background-color: rgba(17,17,68,1);
-    background-image: url('assets/synth_components.png');
-    background-repeat: repeat-y;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/synth_components.png') repeat-y;
     background-size: 100%;
 }
