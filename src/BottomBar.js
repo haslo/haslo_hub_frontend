@@ -43,15 +43,14 @@ export default function BottomBar() {
         .then((response) => response.json())
         .then(({data, errors}) => {
           if (errors) {
-            console.error(errors);
-            console.log(`retries ${retries}, retrying? ${retries < 5}`);
+            // console.error(errors);
+            // console.log(`retries ${retries}, retrying? ${retries < 5}`);
             if (retries < 5) {
               setTimeout(() => {
                 fetchGraphQlData(query, retries + 1);
               }, 1000)
             }
           } else {
-            console.log(data.newsPostTypeCollection.items);
             setNewsPostTypes(data.newsPostTypeCollection.items);
           }
         });
@@ -73,7 +72,7 @@ export default function BottomBar() {
         <Toolbar variant={'dense'} sx={{display: 'flex', justifyContent: 'center', width: 'calc(100% - 32px)'}}>
           <List style={flexContainer}>
             {newsPostTypes.map(newsPostType => (
-              <ListItem sx={{zoom: '50%'}}>
+              <ListItem sx={{zoom: '50%'}} key={newsPostType.channelUrl}>
                 <a href={newsPostType.channelUrl} name={newsPostType.channelDescription} key={newsPostType.sys.id}>
                   <Avatar variant="rounded" alt={newsPostType.channelDescription} src={newsPostType.icon.url}/>
                 </a>
