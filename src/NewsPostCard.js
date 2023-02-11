@@ -33,7 +33,7 @@ export default function NewsPostCard({newsPost}) {
         <Box sx={{position: 'relative'}}>
           <CardMedia
             component="img"
-            height="194"
+            height={(newsPost.type.channelDescription === "YouTube") ? "194" : "250"}
             image={newsPost.thumbnailImage.url + '?fm=webp'}
             alt={newsPost.shortTitle}
           />
