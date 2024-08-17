@@ -6,79 +6,9 @@ import Typography from "@mui/material/Typography";
 
 import NewsPostCard from "./NewsPostCard";
 
-function NewsPosts({searchQuery, isFiltering}) {
+function NewsPosts({searchQuery, newsPosts}) {
 
-  const [newsPosts, setNewsPosts] = useState(null);
   const [maxScroll, setMaxScroll] = useState(9);
-
-  useEffect(() => {
-    const query = `
-    {
-      newsPostCollection(order: [publicationDate_DESC, title_ASC], limit: 1000) {
-        items {
-          title
-          shortTitle
-          description
-          originalUrl
-          remoteId
-          publicationDate
-          isVideo
-          isAudio
-          thumbnailImage {
-            contentType
-            url
-          }
-          type {
-            title
-            channelDescription
-            channelTitle
-            channelUrl
-            icon {
-              contentType
-              url
-            }
-            sys {
-              id
-            }
-          }
-          sys {
-            id
-          }
-        }
-      }
-    }
-    `
-    const fetchGraphQlData = (query, retries) => {
-      // Is this a token in the repository?
-      // yes, it is - it's a read-only token for published CMS content,
-      // which the client also uses to make a request from the browser the SPA is running in.
-      // So go ahead and steal it, it's yours anyway :)
-      window
-        .fetch(`https://graphql.contentful.com/content/v1/spaces/wehngbocf979/`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer ck9CqB4ydwUdbKGF6quZzIqVS0JvmlMhWQJnFSnODrA",
-          },
-          body: JSON.stringify({query}),
-        })
-        .then((response) => response.json())
-        .then(({data, errors}) => {
-          if (errors) {
-            console.error(errors);
-            console.log(`retries ${retries}, retrying? ${retries < 5}`);
-            if (retries < 5) {
-              setTimeout(() => {
-                fetchGraphQlData(query, retries + 1);
-              }, 1000)
-            }
-          } else {
-            setNewsPosts(data.newsPostCollection.items);
-          }
-        });
-    }
-    fetchGraphQlData(query, 0);
-  }, []);
 
   if (!newsPosts) {
     return (

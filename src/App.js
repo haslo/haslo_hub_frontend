@@ -14,11 +14,13 @@ import SearchAppBar from "./SearchAppBar";
 import NewsPosts from "./NewsPosts";
 import SoundCloudIFrame from "./SoundCloudIFrame";
 import BottomBar from "./BottomBar";
+import useFetchNewsPostsAndNewestContent from './useFetchNewsPostsAndNewestContent';
 
 function App() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [searchEventSent, setSearchEventSent] = useState(false);
+  const { newsPosts, newestContentId } = useFetchNewsPostsAndNewestContent();
 
   const theme = createTheme({
     palette: {
@@ -39,8 +41,14 @@ function App() {
           searchEventSent={searchEventSent}
           setSearchEventSent={setSearchEventSent}
         />
-        <SoundCloudIFrame/>
-        <NewsPosts searchQuery={searchQuery} style={{marginTop: '50px'}}/>
+        <SoundCloudIFrame
+          newestContentId={newestContentId}
+        />
+        <NewsPosts
+          searchQuery={searchQuery}
+          newsPosts={newsPosts}
+          style={{marginTop: '50px'}}
+        />
         <BottomBar/>
       </ThemeProvider>
     </div>
