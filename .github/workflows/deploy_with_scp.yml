@@ -30,6 +30,6 @@ jobs:
           host: sl2201.web.hostpoint.ch
           username: bkserfa
           key: ${{ secrets.SSH_DEPLOY_KEY }}
-          source: "build/*"
+          source: "dist/*"
           target: "/home/bkserfa/www/haslo.ch"
           strip_components: 1
