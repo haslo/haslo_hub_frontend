@@ -68,7 +68,7 @@ export default function SearchAppBar({setSearchQuery, searchEventSent, setSearch
             sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'}}}
           >
             <a href='/' style={{textDecoration: 'none', color: 'white'}}>
-              haslo.ch - Hardware Techno from Bern, Switzerland
+              haslo.ch - Homegrown Techno from Bern, Switzerland
             </a>
           </Typography>
           {searchIsPending ? <CircularProgress/> : <></>}
