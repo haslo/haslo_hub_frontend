@@ -26,7 +26,11 @@ export default function NewsPostCard({newsPost}) {
             <Avatar variant="rounded" alt={newsPost.type.channelDescription} src={newsPost.type.icon.url}/>
           </a>
         }
-        title={newsPost.title}
+        title={
+          <a href={newsPost.originalUrl}>
+            {newsPost.title}
+          </a>
+        }
         subheader={format(new Date(newsPost.publicationDate), 'yyyy-MM-dd')}
       />
       <CardActionArea href={newsPost.originalUrl} target='_blank' className={newsPost.isVideo ? 'video_card' : (newsPost.isAudio ? 'audio_card' : 'plain_card')}>
