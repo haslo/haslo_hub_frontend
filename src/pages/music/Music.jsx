@@ -6,7 +6,7 @@ import {MusicPosts} from "./MusicPosts";
 import {fetchMusicApiData} from '../../services/ApiAdapter';
 
 export function Music({searchQuery}) {
-  const {newsPosts, newestContentId} = fetchMusicApiData();
+  const {musicPosts, newestContentId} = fetchMusicApiData();
 
   return (
     <>
@@ -15,7 +15,7 @@ export function Music({searchQuery}) {
       />
       <MusicPosts
         searchQuery={searchQuery}
-        newsPosts={newsPosts}
+        musicPosts={musicPosts}
         style={{marginTop: '50px'}}
       />
     </>

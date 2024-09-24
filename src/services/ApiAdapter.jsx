@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export const fetchMusicApiData = () => {
-  const [newsPosts, setNewsPosts] = useState(null);
+  const [musicPosts, setMusicPosts] = useState(null);
   const [newestContentId, setNewestContentId] = useState(null);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export const fetchMusicApiData = () => {
               }, 1000)
             }
           } else {
-            setNewsPosts(data.newsPostCollection.items);
+            setMusicPosts(data.newsPostCollection.items);
 
             // Find the first SoundCloud post and set its remoteId as the newest content ID
             const soundCloudPost = data.newsPostCollection.items.find(
@@ -79,5 +79,5 @@ export const fetchMusicApiData = () => {
     fetchGraphQlData(query, 0);
   }, []);
 
-  return { newsPosts, newestContentId };
+  return { musicPosts, newestContentId };
 };

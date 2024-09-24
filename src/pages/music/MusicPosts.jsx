@@ -6,11 +6,11 @@ import Typography from "@mui/material/Typography";
 
 import {MusicPostCard} from "./MusicPostCard";
 
-export function MusicPosts({searchQuery, newsPosts}) {
+export function MusicPosts({searchQuery, musicPosts}) {
 
   const [maxScroll, setMaxScroll] = useState(9);
 
-  if (!newsPosts) {
+  if (!musicPosts) {
     return (
       <Container fixed style={{marginTop: '100px'}}>
         <Typography variant='h4' align='center' sx={{color: 'white'}}>
@@ -20,7 +20,7 @@ export function MusicPosts({searchQuery, newsPosts}) {
     );
   }
 
-  const filteredPosts = newsPosts.filter((newsPost) => {
+  const filteredPosts = musicPosts.filter((newsPost) => {
     if (searchQuery === '') {
       return true;
     } else {
