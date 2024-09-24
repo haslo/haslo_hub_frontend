@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Button,
   Card,
   CardContent,
   CardHeader,
@@ -32,6 +33,16 @@ export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_t
           <CardContent>
             {plugin_content}
           </CardContent>
+          <Button
+            component="a"
+            href={plugin_link}
+            fullWidth
+            variant="contained"
+            color="primary"
+            sx={{marginBottom: '15px'}}
+          >
+            Get {plugin_title} here
+          </Button>
         </Card>
       </Grid>
     </>
