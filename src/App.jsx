@@ -59,7 +59,11 @@ function App() {
                 />
               </>
             }/>
-            <Route path="/plugins" element={<Plugins/>}/>
+            <Route path="/plugins" element={
+              <>
+                <Plugins/>
+              </>
+            }/>
           </Routes>
           <BottomBar/>
         </ThemeProvider>
