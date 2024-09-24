@@ -9,11 +9,11 @@ import {
 
 import * as React from "react";
 
-export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_title, plugin_link, plugin_content}) {
+export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_title, card_subheader, plugin_link, plugin_content}) {
   return (
     <>
       <Grid item xs={12} sm={12} md={6} lg={6}>
-        <Card sx={{paddingX: 1}}>
+        <Card sx={{paddingX: 1, marginBottom: '15px'}}>
           <CardHeader
             avatar={
               <a href={avatar_link} name={avatar_name}>
@@ -27,11 +27,10 @@ export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_t
                 </Typography>
               </a>
             }
+            subheader={card_subheader}
           />
           <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              {plugin_content}
-            </Typography>
+            {plugin_content}
           </CardContent>
         </Card>
       </Grid>

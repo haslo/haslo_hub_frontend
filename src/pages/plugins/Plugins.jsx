@@ -17,6 +17,7 @@ export function Plugins() {
             avatar_image_url={"/assets/voltage_modular.png"}
             avatar_link={"https://cherryaudio.com/products/voltage-modular"}
             plugin_title={"Destruktor"}
+            card_subheader={"for Voltage Modular"}
             plugin_link={"https://store.cherryaudio.com/modules/destruktor"}
             plugin_content={<Destruktor plugin_link={"https://store.cherryaudio.com/modules/destruktor"}/>}
           />
@@ -25,6 +26,7 @@ export function Plugins() {
             avatar_image_url={"/assets/voltage_modular.png"}
             avatar_link={"https://cherryaudio.com/products/voltage-modular"}
             plugin_title={"Hääschen"}
+            card_subheader={"for Voltage Modular"}
             plugin_link={"https://store.cherryaudio.com/modules/haaschen"}
             plugin_content={<Haaschen plugin_link={"https://store.cherryaudio.com/modules/haaschen"}/>}
           />
@@ -33,6 +35,7 @@ export function Plugins() {
             avatar_image_url={"/assets/voltage_modular.png"}
             avatar_link={"https://cherryaudio.com/products/voltage-modular"}
             plugin_title={"Ploink"}
+            card_subheader={"for Voltage Modular"}
             plugin_link={"https://store.cherryaudio.com/modules/ploink"}
             plugin_content={<Ploink plugin_link={"https://store.cherryaudio.com/modules/ploink"}/>}
           />

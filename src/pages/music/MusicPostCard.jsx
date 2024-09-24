@@ -21,7 +21,7 @@ import HeadphonesIcon from '@mui/icons-material/Headphones';
 export function MusicPostCard({newsPost}) {
   return (
     <Grid item xs={12} sm={12} md={6} lg={4}>
-      <Card sx={{paddingX: 1}}>
+      <Card sx={{paddingX: 1, marginBottom: '15px'}}>
         <CardHeader
           avatar={
             <a href={newsPost.type.channelUrl} name={newsPost.type.channelDescription}>
