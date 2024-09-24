@@ -10,7 +10,7 @@ function SoundCloudIFrame({newestContentId}) {
       '</iframe>'
 
     return (
-      <Container fixed style={{marginTop: '100px'}}>
+      <Container fixed style={{marginTop: '40px'}}>
         <div dangerouslySetInnerHTML={{__html: iframeHtml}}/>
       </Container>
     );
