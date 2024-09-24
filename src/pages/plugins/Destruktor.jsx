@@ -1,11 +1,16 @@
 import * as React from "react";
 
 import {Box, CardMedia, Typography} from "@mui/material";
+import {PriceStamp} from "./PriceStamp";
 
 export function Destruktor({plugin_link}) {
   return (
     <>
       <Box sx={{position: 'relative', marginBottom: '30px'}}>
+        <PriceStamp
+          color={'#243667'}
+          price={'$10'}
+        />
         <a href={plugin_link}>
           <CardMedia
             component="img"

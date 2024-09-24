@@ -2,7 +2,7 @@ import * as React from "react";
 
 import {Box, Typography} from "@mui/material";
 
-export function FreeStamp() {
+export function PriceStamp({color, price}) {
   return (
     <>
       <Box
@@ -10,7 +10,7 @@ export function FreeStamp() {
           position: 'absolute',
           top: 10,
           right: 10,
-          backgroundColor: '#f50057',
+          backgroundColor: color,
           color: 'white',
           borderRadius: '50%',
           width: 80,
@@ -19,7 +19,7 @@ export function FreeStamp() {
           justifyContent: 'center',
           alignItems: 'center',
           transform: 'rotate(15deg)',
-          boxShadow: '0 0 0 5px #f50057',
+          boxShadow: `0 0 0 5px ${color}`,
           '&::before': {
             content: '""',
             position: 'absolute',
@@ -33,7 +33,7 @@ export function FreeStamp() {
         }}
       >
         <Typography variant="subtitle1" fontWeight="bold">
-          FREE
+          {price}
         </Typography>
       </Box>
     </>

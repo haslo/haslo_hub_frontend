@@ -2,13 +2,16 @@ import * as React from "react";
 
 import {Box, CardMedia, Typography} from "@mui/material";
 
-import {FreeStamp} from "./FreeStamp";
+import {PriceStamp} from "./PriceStamp";
 
 export function Ploink({plugin_link}) {
   return (
     <>
       <Box sx={{position: 'relative', marginBottom: '30px'}}>
-        <FreeStamp/>
+        <PriceStamp
+          color={'#f50057'}
+          price={'FREE'}
+        />
         <a href={plugin_link}>
           <CardMedia
             component="img"
