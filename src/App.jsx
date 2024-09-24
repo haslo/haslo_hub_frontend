@@ -1,28 +1,26 @@
 import './App.css';
-
-import {useState} from "react";
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import {Button, Box, Container} from '@mui/material';
+import {useState} from "react";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import {ThemeProvider} from "@mui/material";
 import {createTheme} from '@mui/material/styles';
 
 import SearchAppBar from "./shared/SearchAppBar";
 import BottomBar from "./shared/BottomBar";
+import NavButtons from "./shared/NavButtons";
 
 import NewsPosts from "./pages/music/NewsPosts";
 import SoundCloudIFrame from "./pages/music/SoundCloudIFrame";
 import Plugins from "./pages/plugins/Plugins";
 
-import useFetchNewsPostsAndNewestContent from './useFetchNewsPostsAndNewestContent';
+import useFetchNewsPostsAndNewestContent from './services/ApiAdapter';
 
 function App() {
-
   const [searchQuery, setSearchQuery] = useState('');
   const [searchEventSent, setSearchEventSent] = useState(false);
   const {newsPosts, newestContentId} = useFetchNewsPostsAndNewestContent();
@@ -47,16 +45,7 @@ function App() {
             searchEventSent={searchEventSent}
             setSearchEventSent={setSearchEventSent}
           />
-          <Container fixed style={{marginTop: '100px'}}>
-            <Box sx={{display: 'flex', justifyContent: 'center', mt: 2, mb: 2}}>
-              <Button component={Link} to="/" variant="contained" sx={{mr: 2}}>
-                Music
-              </Button>
-              <Button component={Link} to="/plugins" variant="contained">
-                Plugins
-              </Button>
-            </Box>
-          </Container>
+          <NavButtons/>
           <Routes>
             <Route path="/" element={
               <>
