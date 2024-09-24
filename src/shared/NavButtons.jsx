@@ -1,11 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
-import { Box, Button, Container, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import {Link, useLocation} from "react-router-dom";
+
+import {Button, Container, Grid} from "@mui/material";
 
 export function NavButtons() {
   const location = useLocation();
-  const theme = useTheme();
-  const isTabletOrLower = useMediaQuery(theme.breakpoints.down('md'));
 
   const buttonStyle = {
     width: '100%',
@@ -25,31 +23,28 @@ export function NavButtons() {
 
   return (
     <Container fixed style={{ marginTop: '100px' }}>
-      <Box sx={{
-        display: 'flex',
-        flexDirection: isTabletOrLower ? 'column' : 'row',
-        width: '100%',
-        mb: 2,
-        gap: '15px',
-        '& > *': {
-          flexGrow: isTabletOrLower ? 0 : 1,
-        },
-      }}>
-        <Button
-          component={Link}
-          to="/"
-          sx={location.pathname === '/' ? activeButtonStyle : buttonStyle}
-        >
-          Music
-        </Button>
-        <Button
-          component={Link}
-          to="/plugins"
-          sx={location.pathname === '/plugins' ? activeButtonStyle : buttonStyle}
-        >
-          Plugins
-        </Button>
-      </Box>
+      <Grid container spacing={3} rowSpacing={2}>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Button
+            component={Link}
+            to="/"
+            sx={location.pathname === '/' ? activeButtonStyle : buttonStyle}
+            fullWidth
+          >
+            MUSIC
+          </Button>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Button
+            component={Link}
+            to="/plugins"
+            sx={location.pathname === '/plugins' ? activeButtonStyle : buttonStyle}
+            fullWidth
+          >
+            PLUGINS
+          </Button>
+        </Grid>
+      </Grid>
     </Container>
   );
 }

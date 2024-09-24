@@ -1,15 +1,24 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
+
+import {Container, Grid} from '@mui/material';
+
+import {PluginCard} from "./PluginCard";
 
 export function Plugins() {
   return (
-    <Box sx={{ padding: 3 }}>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Plugins
-      </Typography>
-      <Typography variant="body1">
-        This is the plugins page. Add your plugin content here.
-      </Typography>
-    </Box>
+    <>
+      <Container fixed style={{marginTop: '40px'}}>
+        <Grid container spacing={3} rowSpacing={2}>
+          <PluginCard
+            title={"Plugin 1"}
+            content={"Content 1"}
+          />
+          <PluginCard
+            title={"Plugin 2"}
+            content={"Content 2"}
+          />
+        </Grid>
+      </Container>
+    </>
   );
 }

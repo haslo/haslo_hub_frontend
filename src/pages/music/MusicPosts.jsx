@@ -36,9 +36,7 @@ export function MusicPosts({searchQuery, musicPosts}) {
         <Container fixed style={{marginTop: '40px'}}>
           <Grid container spacing={3} rowSpacing={2}>
             {filteredPosts.slice(0, maxScroll).map(newsPost => (
-              <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
-                <MusicPostCard newsPost={newsPost}></MusicPostCard>
-              </Grid>
+              <MusicPostCard newsPost={newsPost} key={newsPost.sys.id}></MusicPostCard>
             ))}
           </Grid>
         </Container>
