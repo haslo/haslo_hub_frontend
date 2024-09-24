@@ -22,6 +22,9 @@ export function Ploink({plugin_link}) {
           />
         </a>
       </Box>
+      <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
+        Bouncing with Fun
+      </Typography>
       <Typography variant="body2" color="text.secondary">
         Ploink is a trigger / gate module that generates a series of triggers or gates out of one incoming trigger. Each
         trigger goes faster and faster, until the minimum length is reached and the sequence of triggers / gates stops.

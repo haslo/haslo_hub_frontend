@@ -22,6 +22,9 @@ export function Haaschen({plugin_link}) {
           />
         </a>
       </Box>
+      <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
+        Instant Width
+      </Typography>
       <Typography variant="body2" color="text.secondary">
         The Haas effect is a stereo effect where one of the channels is delayed by a very short delay time. The two
         sounds that reach the listener's ears are then perceived as one binaural auditory event. The position of the

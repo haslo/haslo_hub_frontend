@@ -21,8 +21,11 @@ export function Destruktor({plugin_link}) {
           />
         </a>
       </Box>
+      <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
+        Guilty Distortion Pleasure
+      </Typography>
       <Typography variant="body" color="text.secondary">
-        A distortion module that works as a...
+        DeSTRuKTor is a distortion module that works as a...
       </Typography>
       <ul>
         <li>
