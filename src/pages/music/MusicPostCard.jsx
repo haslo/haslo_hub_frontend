@@ -17,7 +17,7 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ImageIcon from '@mui/icons-material/Image';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 
-export default function NewsPostCard({newsPost}) {
+export function MusicPostCard({newsPost}) {
   return (
     <Card sx={{paddingX: 1}}>
       <CardHeader

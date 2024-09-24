@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 
 import {AppBar, Avatar, Box, Toolbar, List, ListItem} from "@mui/material";
 
-export default function BottomBar() {
+export function BottomBar() {
 
   const [newsPostTypes, setNewsPostTypes] = useState([]);
 

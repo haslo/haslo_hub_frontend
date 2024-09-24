@@ -1,6 +1,6 @@
 import {Container} from "@mui/material";
 
-function SoundCloudIFrame({newestContentId}) {
+export function SoundCloudIFrame({newestContentId}) {
   if (newestContentId !== null && newestContentId !== undefined) {
     const iframeHtml = '<iframe title="Featured Track" ' +
       'width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" ' +
@@ -16,5 +16,3 @@ function SoundCloudIFrame({newestContentId}) {
     );
   }
 }
-
-export default SoundCloudIFrame;

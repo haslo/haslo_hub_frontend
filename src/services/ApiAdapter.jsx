@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useFetchNewsPostsAndNewestContent = () => {
+export const fetchMusicApiData = () => {
   const [newsPosts, setNewsPosts] = useState(null);
   const [newestContentId, setNewestContentId] = useState(null);
 
@@ -81,5 +81,3 @@ const useFetchNewsPostsAndNewestContent = () => {
 
   return { newsPosts, newestContentId };
 };
-
-export default useFetchNewsPostsAndNewestContent;

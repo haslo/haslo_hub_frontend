@@ -54,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
   },
 }));
 
-export default function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSent}) {
+export function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSent}) {
   const [searchIsPending, startSearchTransition] = useTransition();
 
   return (

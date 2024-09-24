@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
 
-function Plugins() {
+export function Plugins() {
   return (
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" component="h1" gutterBottom>
@@ -13,5 +13,3 @@ function Plugins() {
     </Box>
   );
 }
-
-export default Plugins;

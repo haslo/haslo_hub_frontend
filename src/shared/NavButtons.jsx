@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Box, Button, Container, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-function NavButtons() {
+export function NavButtons() {
   const location = useLocation();
   const theme = useTheme();
   const isTabletOrLower = useMediaQuery(theme.breakpoints.down('md'));
@@ -53,5 +53,3 @@ function NavButtons() {
     </Container>
   );
 }
-
-export default NavButtons;

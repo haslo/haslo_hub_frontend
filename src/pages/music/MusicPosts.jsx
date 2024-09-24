@@ -4,9 +4,9 @@ import {Waypoint} from "react-waypoint";
 import {Container, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
-import NewsPostCard from "./NewsPostCard";
+import {MusicPostCard} from "./MusicPostCard";
 
-function NewsPosts({searchQuery, newsPosts}) {
+export function MusicPosts({searchQuery, newsPosts}) {
 
   const [maxScroll, setMaxScroll] = useState(9);
 
@@ -37,16 +37,18 @@ function NewsPosts({searchQuery, newsPosts}) {
           <Grid container spacing={3} rowSpacing={2}>
             {filteredPosts.slice(0, maxScroll).map(newsPost => (
               <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
-                <NewsPostCard newsPost={newsPost}></NewsPostCard>
+                <MusicPostCard newsPost={newsPost}></MusicPostCard>
               </Grid>
             ))}
           </Grid>
         </Container>
         <Waypoint
-          onEnter = {() => {
+          onEnter={() => {
             setMaxScroll(maxScroll + 6);
           }}
-        ><div style={{height: '50px'}}/></Waypoint>
+        >
+          <div style={{height: '50px'}}/>
+        </Waypoint>
       </>
     );
   } else {
@@ -59,5 +61,3 @@ function NewsPosts({searchQuery, newsPosts}) {
     );
   }
 }
-
-export default NewsPosts;

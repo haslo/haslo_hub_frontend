@@ -10,20 +10,16 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {ThemeProvider} from "@mui/material";
 import {createTheme} from '@mui/material/styles';
 
-import SearchAppBar from "./shared/SearchAppBar";
-import BottomBar from "./shared/BottomBar";
-import NavButtons from "./shared/NavButtons";
+import {SearchAppBar} from "./shared/SearchAppBar";
+import {BottomBar} from "./shared/BottomBar";
+import {NavButtons} from "./shared/NavButtons";
 
-import NewsPosts from "./pages/music/NewsPosts";
-import SoundCloudIFrame from "./pages/music/SoundCloudIFrame";
-import Plugins from "./pages/plugins/Plugins";
-
-import useFetchNewsPostsAndNewestContent from './services/ApiAdapter';
+import {Music} from "./pages/music/Music";
+import {Plugins} from "./pages/plugins/Plugins";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchEventSent, setSearchEventSent] = useState(false);
-  const {newsPosts, newestContentId} = useFetchNewsPostsAndNewestContent();
 
   const theme = createTheme({
     palette: {
@@ -48,21 +44,14 @@ function App() {
           <NavButtons/>
           <Routes>
             <Route path="/" element={
-              <>
-                <SoundCloudIFrame
-                  newestContentId={newestContentId}
-                />
-                <NewsPosts
-                  searchQuery={searchQuery}
-                  newsPosts={newsPosts}
-                  style={{marginTop: '50px'}}
-                />
-              </>
+              <Music
+                searchQuery={searchQuery}
+              />
             }/>
             <Route path="/plugins" element={
-              <>
-                <Plugins/>
-              </>
+              <Plugins
+                searchQuery={searchQuery}
+              />
             }/>
           </Routes>
           <BottomBar/>
