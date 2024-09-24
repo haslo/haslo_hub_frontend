@@ -1,26 +1,25 @@
 import './App.css';
-
-import {useState} from "react";
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import {createTheme} from '@mui/material/styles';
-import {ThemeProvider} from "@mui/material";
+import {useState} from "react";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
-import SearchAppBar from "./SearchAppBar";
-import NewsPosts from "./NewsPosts";
-import SoundCloudIFrame from "./SoundCloudIFrame";
-import BottomBar from "./BottomBar";
-import useFetchNewsPostsAndNewestContent from './useFetchNewsPostsAndNewestContent';
+import {ThemeProvider} from "@mui/material";
+import {createTheme} from '@mui/material/styles';
+
+import {SearchAppBar} from "./shared/SearchAppBar";
+import {BottomBar} from "./shared/BottomBar";
+import {NavButtons} from "./shared/NavButtons";
+
+import {Music} from "./pages/music/Music";
+import {Plugins} from "./pages/plugins/Plugins";
 
 function App() {
-
   const [searchQuery, setSearchQuery] = useState('');
   const [searchEventSent, setSearchEventSent] = useState(false);
-  const { newsPosts, newestContentId } = useFetchNewsPostsAndNewestContent();
 
   const theme = createTheme({
     palette: {
@@ -34,24 +33,31 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <ThemeProvider theme={theme}>
-        <SearchAppBar
-          setSearchQuery={setSearchQuery}
-          searchEventSent={searchEventSent}
-          setSearchEventSent={setSearchEventSent}
-        />
-        <SoundCloudIFrame
-          newestContentId={newestContentId}
-        />
-        <NewsPosts
-          searchQuery={searchQuery}
-          newsPosts={newsPosts}
-          style={{marginTop: '50px'}}
-        />
-        <BottomBar/>
-      </ThemeProvider>
-    </div>
+    <Router>
+      <div className="App">
+        <ThemeProvider theme={theme}>
+          <SearchAppBar
+            setSearchQuery={setSearchQuery}
+            searchEventSent={searchEventSent}
+            setSearchEventSent={setSearchEventSent}
+          />
+          <NavButtons/>
+          <Routes>
+            <Route path="/" element={
+              <Music
+                searchQuery={searchQuery}
+              />
+            }/>
+            <Route path="/plugins" element={
+              <Plugins
+                searchQuery={searchQuery}
+              />
+            }/>
+          </Routes>
+          <BottomBar/>
+        </ThemeProvider>
+      </div>
+    </Router>
   );
 }
 

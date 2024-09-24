@@ -4,13 +4,13 @@ import {Waypoint} from "react-waypoint";
 import {Container, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
-import NewsPostCard from "./NewsPostCard";
+import {MusicPostCard} from "./MusicPostCard";
 
-function NewsPosts({searchQuery, newsPosts}) {
+export function MusicPosts({searchQuery, musicPosts}) {
 
   const [maxScroll, setMaxScroll] = useState(9);
 
-  if (!newsPosts) {
+  if (!musicPosts) {
     return (
       <Container fixed style={{marginTop: '100px'}}>
         <Typography variant='h4' align='center' sx={{color: 'white'}}>
@@ -20,7 +20,7 @@ function NewsPosts({searchQuery, newsPosts}) {
     );
   }
 
-  const filteredPosts = newsPosts.filter((newsPost) => {
+  const filteredPosts = musicPosts.filter((newsPost) => {
     if (searchQuery === '') {
       return true;
     } else {
@@ -36,17 +36,17 @@ function NewsPosts({searchQuery, newsPosts}) {
         <Container fixed style={{marginTop: '40px'}}>
           <Grid container spacing={3} rowSpacing={2}>
             {filteredPosts.slice(0, maxScroll).map(newsPost => (
-              <Grid item xs={12} sm={12} md={6} lg={4} key={newsPost.sys.id}>
-                <NewsPostCard newsPost={newsPost}></NewsPostCard>
-              </Grid>
+              <MusicPostCard newsPost={newsPost} key={newsPost.sys.id}></MusicPostCard>
             ))}
           </Grid>
         </Container>
         <Waypoint
-          onEnter = {() => {
+          onEnter={() => {
             setMaxScroll(maxScroll + 6);
           }}
-        ><div style={{height: '50px'}}/></Waypoint>
+        >
+          <div style={{height: '50px'}}/>
+        </Waypoint>
       </>
     );
   } else {
@@ -59,5 +59,3 @@ function NewsPosts({searchQuery, newsPosts}) {
     );
   }
 }
-
-export default NewsPosts;

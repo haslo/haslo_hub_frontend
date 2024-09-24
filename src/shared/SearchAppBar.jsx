@@ -54,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
   },
 }));
 
-export default function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSent}) {
+export function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSent}) {
   const [searchIsPending, startSearchTransition] = useTransition();
 
   return (
@@ -67,8 +67,8 @@ export default function SearchAppBar({setSearchQuery, searchEventSent, setSearch
             component="div"
             sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'}}}
           >
-            <a href='/' style={{textDecoration: 'none', color: 'white'}}>
-              haslo.ch - Homegrown Techno from Bern, Switzerland
+            <a href='/public' style={{textDecoration: 'none', color: 'white'}}>
+              haslo.ch - Techno and Plugins from Bern, Switzerland
             </a>
           </Typography>
           {searchIsPending ? <CircularProgress/> : <></>}
