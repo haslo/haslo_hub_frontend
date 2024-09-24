@@ -67,7 +67,7 @@ export function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSen
             component="div"
             sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'}}}
           >
-            <a href='/public' style={{textDecoration: 'none', color: 'white'}}>
+            <a href='/' style={{textDecoration: 'none', color: 'white'}}>
               haslo.ch - Techno and Plugins from Bern, Switzerland
             </a>
           </Typography>
