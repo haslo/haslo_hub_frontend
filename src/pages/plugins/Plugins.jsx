@@ -33,15 +33,6 @@ export function Plugins() {
             avatar_name={"Voltage Modular Module"}
             avatar_image_url={"/assets/voltage_modular.png"}
             avatar_link={"https://cherryaudio.com/products/voltage-modular"}
-            plugin_title={"DeSTRuKTor"}
-            card_subheader={"for Voltage Modular"}
-            plugin_link={"https://store.cherryaudio.com/modules/destruktor"}
-            plugin_content={<Destruktor plugin_link={"https://store.cherryaudio.com/modules/destruktor"}/>}
-          />
-          <PluginCard
-            avatar_name={"Voltage Modular Module"}
-            avatar_image_url={"/assets/voltage_modular.png"}
-            avatar_link={"https://cherryaudio.com/products/voltage-modular"}
             plugin_title={"HÄÄSchen"}
             card_subheader={"for Voltage Modular"}
             plugin_link={"https://store.cherryaudio.com/modules/haaschen"}
@@ -55,6 +46,15 @@ export function Plugins() {
             card_subheader={"for Voltage Modular"}
             plugin_link={"https://store.cherryaudio.com/modules/ploink"}
             plugin_content={<Ploink plugin_link={"https://store.cherryaudio.com/modules/ploink"}/>}
+          />
+          <PluginCard
+            avatar_name={"Voltage Modular Module"}
+            avatar_image_url={"/assets/voltage_modular.png"}
+            avatar_link={"https://cherryaudio.com/products/voltage-modular"}
+            plugin_title={"DeSTRuKTor"}
+            card_subheader={"for Voltage Modular"}
+            plugin_link={"https://store.cherryaudio.com/modules/destruktor"}
+            plugin_content={<Destruktor plugin_link={"https://store.cherryaudio.com/modules/destruktor"}/>}
           />
         </Grid>
       </Container>
