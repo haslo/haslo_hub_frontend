@@ -22,7 +22,7 @@ export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_t
               </a>
             }
             title={
-              <a href={plugin_link} name={plugin_title}>
+              <a href={plugin_link} name={plugin_title} className={"plugin_card"}>
                 <Typography variant='h4'>
                   {plugin_title}
                 </Typography>
@@ -40,6 +40,7 @@ export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_t
             variant="contained"
             color="primary"
             sx={{marginBottom: '15px'}}
+            className={"plugin_card"}
           >
             Get {plugin_title} here
           </Button>

@@ -11,7 +11,7 @@ export function Destruktor({plugin_link}) {
           color={'#243667'}
           price={'$10'}
         />
-        <a href={plugin_link}>
+        <a href={plugin_link} className={"plugin_card"}>
           <CardMedia
             component="img"
             height="300"

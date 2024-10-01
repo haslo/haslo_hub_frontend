@@ -12,7 +12,7 @@ export function Ploink({plugin_link}) {
           color={'#f50057'}
           price={'FREE'}
         />
-        <a href={plugin_link}>
+        <a href={plugin_link} className={"plugin_card"}>
           <CardMedia
             component="img"
             height="300"
