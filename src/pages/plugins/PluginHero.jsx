@@ -11,7 +11,7 @@ export function PluginHero({hero_title, hero_content}) {
   return (
     <>
       <Grid item xs={12} sm={12} md={12} lg={12}>
-        <Card sx={{paddingX: 1, marginBottom: '25px'}}>
+        <Card sx={{paddingX: 1, marginTop: '10px', marginBottom: '25px'}}>
           <CardContent>
             <Typography variant='h4' sx={{textAlign: 'center', marginBottom: '20px'}}>
               {hero_title}

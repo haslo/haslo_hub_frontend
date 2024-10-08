@@ -8,6 +8,7 @@ export function Destruktor({plugin_link}) {
     <>
       <Box sx={{position: 'relative', marginBottom: '30px'}}>
         <PriceStamp
+          top={10}
           color={'#243667'}
           price={'$10'}
         />

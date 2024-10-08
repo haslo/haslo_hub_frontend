@@ -2,13 +2,13 @@ import * as React from "react";
 
 import {Box, Typography} from "@mui/material";
 
-export function PriceStamp({color, price}) {
+export function PriceStamp({color, price, top}) {
   return (
     <>
       <Box
         sx={{
           position: 'absolute',
-          top: 10,
+          top: top,
           right: 10,
           backgroundColor: color,
           color: 'white',

@@ -7,6 +7,8 @@ import {Destruktor} from "./Destruktor";
 import {Haaschen} from "./Haaschen";
 import {Ploink} from "./Ploink";
 import {PluginHero} from "./PluginHero";
+import {TinyHaas} from "./TinyHaas";
+import {BfgCompressor} from "./BfgCompressor";
 
 export function Plugins() {
   return (
@@ -24,6 +26,26 @@ export function Plugins() {
             }
           />
         </Grid>
+        <Grid container spacing={3} rowSpacing={2}>
+          <PluginCard
+            avatar_name={"Audio FX Plugin"}
+            avatar_image_url={"/assets/haslo_logo.png"}
+            avatar_link={null}
+            plugin_title={"tinyHaas"}
+            card_subheader={"For all DAWs"}
+            plugin_link={null}
+            plugin_content={<TinyHaas plugin_title={null}/>}
+          />
+          <PluginCard
+            avatar_name={"Audio FX Plugin"}
+            avatar_image_url={"/assets/haslo_logo.png"}
+            avatar_link={null}
+            plugin_title={"BFG Compressor"}
+            card_subheader={"For all DAWs"}
+            plugin_link={null}
+            plugin_content={<BfgCompressor plugin_link={null}/>}
+          />
+        </Grid>
         <Grid container spacing={1} rowSpacing={1}>
           <PluginHero
             hero_title={"Voltage Modular / Legacy"}
@@ -37,24 +59,6 @@ export function Plugins() {
             }
           />
         </Grid>
-        <PluginCard
-          avatar_name={"Audio FX Plugin"}
-          avatar_image_url={"/assets/haslo_logo.png"}
-          avatar_link={null}
-          plugin_title={"tinyHaas"}
-          card_subheader={null}
-          plugin_link={"https://store.cherryaudio.com/modules/ploink"}
-          plugin_content={"asdf"}
-        />
-        <PluginCard
-          avatar_name={"Audio FX Plugin"}
-          avatar_image_url={"/assets/haslo_logo.png"}
-          avatar_link={null}
-          plugin_title={"BFG Compressor"}
-          card_subheader={null}
-          plugin_link={"https://store.cherryaudio.com/modules/ploink"}
-          plugin_content={"asdf"}
-        />
         <Grid container spacing={3} rowSpacing={2}>
           <PluginCard
             avatar_name={"Voltage Modular Module"}

@@ -4,27 +4,18 @@ import {Box, CardMedia, Typography} from "@mui/material";
 
 import {PriceStamp} from "./PriceStamp";
 
-export function Ploink({plugin_link}) {
+export function BfgCompressor({plugin_link}) {
   return (
     <>
       <Box sx={{position: 'relative', marginBottom: '30px'}}>
         <PriceStamp
-          top={10}
-          color={'#f50057'}
-          price={'FREE'}
+          top={-60}
+          color={'#243667'}
+          price={'TBD'}
         />
-        <a href={plugin_link} className={"plugin_card"}>
-          <CardMedia
-            component="img"
-            height="300"
-            image={"/assets/ploink.png"}
-            alt={"Ploink Screenshot"}
-            sx={{padding: "1em 1em 0 1em", objectFit: "contain"}}
-          />
-        </a>
       </Box>
       <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
-        Bouncing with Fun
+        Extreme multiband upward compression
       </Typography>
       <Typography variant="body2" color="text.secondary">
         Ploink is a trigger / gate module that generates a series of triggers or gates out of one incoming trigger. Each

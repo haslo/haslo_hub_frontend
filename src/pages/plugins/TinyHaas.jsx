@@ -4,27 +4,18 @@ import {Box, CardMedia, Typography} from "@mui/material";
 
 import {PriceStamp} from "./PriceStamp";
 
-export function Ploink({plugin_link}) {
+export function TinyHaas({plugin_link}) {
   return (
     <>
       <Box sx={{position: 'relative', marginBottom: '30px'}}>
         <PriceStamp
-          top={10}
+          top={-60}
           color={'#f50057'}
           price={'FREE'}
         />
-        <a href={plugin_link} className={"plugin_card"}>
-          <CardMedia
-            component="img"
-            height="300"
-            image={"/assets/ploink.png"}
-            alt={"Ploink Screenshot"}
-            sx={{padding: "1em 1em 0 1em", objectFit: "contain"}}
-          />
-        </a>
       </Box>
       <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
-        Bouncing with Fun
+        Like HÄÄSchen, but multiband and VST3
       </Typography>
       <Typography variant="body2" color="text.secondary">
         Ploink is a trigger / gate module that generates a series of triggers or gates out of one incoming trigger. Each

@@ -10,7 +10,15 @@ import {
 
 import * as React from "react";
 
-export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_title, card_subheader, plugin_link, plugin_content}) {
+export function PluginCard({
+                             avatar_name,
+                             avatar_image_url,
+                             avatar_link,
+                             plugin_title,
+                             card_subheader,
+                             plugin_link,
+                             plugin_content
+                           }) {
   return (
     <>
       <Grid item xs={12} sm={12} md={6} lg={6}>
@@ -39,17 +47,21 @@ export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_t
           <CardContent>
             {plugin_content}
           </CardContent>
-          <Button
-            component="a"
-            href={plugin_link}
-            fullWidth
-            variant="contained"
-            color="primary"
-            sx={{marginBottom: '15px'}}
-            className={"plugin_card"}
-          >
-            Get {plugin_title} here
-          </Button>
+          {
+            plugin_link ?
+              <Button
+                component="a"
+                href={plugin_link}
+                fullWidth
+                variant="contained"
+                color="primary"
+                sx={{marginBottom: '15px'}}
+                className={"plugin_card"}
+              >
+                Get {plugin_title} here
+              </Button> :
+              <></>
+          }
         </Card>
       </Grid>
     </>
