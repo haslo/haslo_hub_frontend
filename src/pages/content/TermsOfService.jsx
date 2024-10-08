@@ -99,10 +99,9 @@ export function TermsOfService() {
                 </Typography>
                 <Typography variant="body1" paragraph>
                   In no event shall <strong>haslo's Plugins</strong>, nor its directors, employees, partners, agents,
-                  suppliers, or
-                  affiliates, be liable for any indirect, incidental, special, consequential or punitive damages,
-                  including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
-                  resulting from your access to or use of or inability to access or use the Service.
+                  suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive
+                  damages, including without limitation, loss of profits, data, use, goodwill, or other intangible
+                  losses, resulting from your access to or use of or inability to access or use the Service.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   9. Governing Law
