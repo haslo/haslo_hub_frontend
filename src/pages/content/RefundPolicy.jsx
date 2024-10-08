@@ -15,7 +15,8 @@ export function RefundPolicy() {
                   <em>Last updated: 2024-10-08</em>
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  At haslo Plugins, we want you to be completely satisfied with your purchase. This refund policy
+                  At <strong>haslo's Plugins</strong>, we want you to be completely satisfied with your purchase. This
+                  refund policy
                   outlines the terms and conditions for refunds on our products.
                 </Typography>
 
@@ -23,7 +24,7 @@ export function RefundPolicy() {
                   1. Refunds for Our Own Plugins
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  For all audio plugins developed and sold directly by haslo Plugins:
+                  For all audio plugins developed and sold directly by <strong>haslo's Plugins</strong>:
                 </Typography>
                 <Typography variant="body1" paragraph>
                   <ul>

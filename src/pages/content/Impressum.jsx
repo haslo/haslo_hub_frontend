@@ -31,7 +31,8 @@ export function Impressum() {
                   Kontakt: <a href="mailto:haslo@haslo.ch">haslo@haslo.ch</a>
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  haslo Plugins ist eine Einzelfirma nach schweizerischem Recht (Obligationenrecht, OR 934 ff.).
+                  <strong>haslo's Plugins</strong> ist eine Einzelfirma nach schweizerischem Recht (Obligationenrecht,
+                  OR 934 ff.).
                 </Typography>
                 <Typography variant="body1" paragraph>
                   Haftungsausschluss: Der Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit,

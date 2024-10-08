@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Grid, Typography } from '@mui/material';
-import { HeroBox } from "../../shared/HeroBox";
+import {Container, Grid, Typography} from '@mui/material';
+import {HeroBox} from "../../shared/HeroBox";
 
 export function PrivacyNotice() {
   return (
@@ -15,7 +15,8 @@ export function PrivacyNotice() {
                   <em>Last updated: 2024-10-08</em>
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  This Privacy Notice explains how we collect, use, and protect your personal information when you use our website.
+                  This Privacy Notice explains how we collect, use, and protect your personal information when you use
+                  our website.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   1. Information We Collect
@@ -55,19 +56,22 @@ export function PrivacyNotice() {
                   4. Cookies and Tracking Technologies
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  We use cookies and similar technologies to collect and store information when you visit our website. You can manage your cookie preferences through your browser settings.
+                  We use cookies and similar technologies to collect and store information when you visit our website.
+                  You can manage your cookie preferences through your browser settings.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   5. Newsletter
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Our newsletter uses a double opt-in process. Your email address will only be used to send you the newsletter and related communications. You can unsubscribe at any time.
+                  Our newsletter uses a double opt-in process. Your email address will only be used to send you the
+                  newsletter and related communications. You can unsubscribe at any time.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   6. Sales and Communication
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  If you make a purchase, we will only use your contact information for communications relevant to that specific sale.
+                  If you make a purchase, we will only use your contact information for communications relevant to that
+                  specific sale.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   7. Your Rights
@@ -80,7 +84,8 @@ export function PrivacyNotice() {
                   8. Changes to This Privacy Notice
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  We may update this Privacy Notice from time to time. We will notify you of any significant changes by posting the new Privacy Notice on this page.
+                  We may update this Privacy Notice from time to time. We will notify you of any significant changes by
+                  posting the new Privacy Notice on this page.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   9. Contact Us

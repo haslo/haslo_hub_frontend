@@ -16,7 +16,8 @@ export function TermsOfService() {
                 </Typography>
                 <Typography variant="body1" paragraph>
                   Please read these Terms of Service ("Terms", "Terms of Service") carefully before using <a
-                  href={"https://haslo.ch"}>haslo.ch</a> (the "Service") operated by haslo Plugins ("us", "we", or
+                  href={"https://haslo.ch"}>haslo.ch</a> (the "Service") operated by <strong>haslo's
+                  Plugins</strong> ("us", "we", or
                   "our").
                 </Typography>
                 <Typography variant="h6" gutterBottom>
@@ -34,7 +35,9 @@ export function TermsOfService() {
                   <ul>
                     <li>Showcase and provide information about our music and videos</li>
                     <li>Advertise our plugins available in the Voltage Modular store</li>
-                    <li>Describe and, in the future, sell our own audio plugins, including but not limited to VST3, AU, and other formats, encompassing audio effects, visual effects, and synthesizers</li>
+                    <li>Describe and, in the future, sell our own audio plugins, including but not limited to VST3, AU,
+                      and other formats, encompassing audio effects, visual effects, and synthesizers
+                    </li>
                   </ul>
                   The Service may be updated or expanded in the future to include additional features or products.
                 </Typography>
@@ -71,7 +74,8 @@ export function TermsOfService() {
                 </Typography>
                 <Typography variant="body1" paragraph>
                   The Service and its original content, features, and functionality are and will remain the exclusive
-                  property of haslo Plugins and its licensors. The Service is protected by copyright, trademark,
+                  property of <strong>haslo's Plugins</strong> and its licensors. The Service is protected by copyright,
+                  trademark,
                   and other laws.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
@@ -79,7 +83,8 @@ export function TermsOfService() {
                 </Typography>
                 <Typography variant="body1" paragraph>
                   Our Service may contain links to third-party websites or services that are not owned or controlled by
-                  haslo Plugins. We have no control over, and assume no responsibility for, the content, privacy
+                  <strong>haslo's Plugins</strong>. We have no control over, and assume no responsibility for, the
+                  content, privacy
                   policies, or practices of any third-party websites or services.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
@@ -93,7 +98,8 @@ export function TermsOfService() {
                   8. Limitation of Liability
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  In no event shall haslo Plugins, nor its directors, employees, partners, agents, suppliers, or
+                  In no event shall <strong>haslo's Plugins</strong>, nor its directors, employees, partners, agents,
+                  suppliers, or
                   affiliates, be liable for any indirect, incidental, special, consequential or punitive damages,
                   including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
                   resulting from your access to or use of or inability to access or use the Service.
