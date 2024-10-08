@@ -16,26 +16,7 @@ export function SoundCloudIFrame({newestContentId}) {
           <div dangerouslySetInnerHTML={{__html: iframeHtml}}/>
         </div>
         <div className="cookieconsent-optout-marketing">
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <Card sx={{paddingX: 1, marginTop: '10px', marginBottom: '25px'}}>
-              <CardContent>
-                <Typography variant='h4' sx={{textAlign: 'center', marginBottom: '20px'}}>
-                  Newest track goes here..
-                </Typography>                <Typography variant="body1" gutterBottom>
-                  To listen to the music, please accept marketing cookies. This allows the website to embed the SoundCloud player.
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                  sx={{marginTop: '20px'}}
-                  onClick={() => window.Cookiebot.renew()}
-                >
-                  Update Cookie Preferences
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
+          <></>
         </div>
       </Container>
     )
