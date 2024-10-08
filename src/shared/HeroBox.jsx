@@ -7,7 +7,7 @@ import {
 
 import * as React from "react";
 
-export function PluginHero({hero_title, hero_content}) {
+export function HeroBox({hero_title, hero_content}) {
   return (
     <>
       <Grid item xs={12} sm={12} md={12} lg={12}>
