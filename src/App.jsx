@@ -17,6 +17,11 @@ import {NavButtons} from "./shared/NavButtons";
 import {Music} from "./pages/music/Music";
 import {Plugins} from "./pages/plugins/Plugins";
 
+import {Impressum} from "./pages/content/Impressum";
+import {PrivacyNotice} from "./pages/content/PrivacyNotice";
+import {RefundPolicy} from "./pages/content/RefundPolicy";
+import {TermsOfService} from "./pages/content/TermsOfService";
+
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchEventSent, setSearchEventSent] = useState(false);
@@ -50,6 +55,26 @@ function App() {
             }/>
             <Route path="/plugins" element={
               <Plugins
+                searchQuery={searchQuery}
+              />
+            }/>
+            <Route path="/tos" element={
+              <TermsOfService
+                searchQuery={searchQuery}
+              />
+            }/>
+            <Route path="/impressum" element={
+              <Impressum
+                searchQuery={searchQuery}
+              />
+            }/>
+            <Route path="/privacy" element={
+              <PrivacyNotice
+                searchQuery={searchQuery}
+              />
+            }/>
+            <Route path="/refunds" element={
+              <RefundPolicy
                 searchQuery={searchQuery}
               />
             }/>

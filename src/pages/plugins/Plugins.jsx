@@ -2,20 +2,22 @@ import React from 'react';
 
 import {Container, Grid} from '@mui/material';
 
+import {HeroBox} from "../../shared/HeroBox";
 import {PluginCard} from "./PluginCard";
-import {Destruktor} from "./Destruktor";
-import {Haaschen} from "./Haaschen";
-import {Ploink} from "./Ploink";
-import {PluginHero} from "./PluginHero";
+
 import {TinyHaas} from "./TinyHaas";
 import {BfgCompressor} from "./BfgCompressor";
+import {Haaschen} from "./Haaschen";
+import {Ploink} from "./Ploink";
+import {Destruktor} from "./Destruktor";
 
-export function Plugins() {
+export function Plugins({searchQuery}) {
+  // TODO eventually use search query
   return (
     <>
       <Container fixed style={{marginTop: '40px', marginBottom: '100px'}}>
         <Grid container spacing={1} rowSpacing={1}>
-          <PluginHero
+          <HeroBox
             hero_title={"Upcoming Plugins"}
             hero_content={
               <>
@@ -50,7 +52,7 @@ export function Plugins() {
           />
         </Grid>
         <Grid container spacing={1} rowSpacing={1}>
-          <PluginHero
+          <HeroBox
             hero_title={"Voltage Modular / Legacy"}
             hero_content={
               <>
