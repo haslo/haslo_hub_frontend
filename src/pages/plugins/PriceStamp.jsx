@@ -2,13 +2,13 @@ import * as React from "react";
 
 import {Box, Typography} from "@mui/material";
 
-export function PriceStamp({color, price}) {
+export function PriceStamp({color, price, top}) {
   return (
     <>
       <Box
         sx={{
           position: 'absolute',
-          top: 10,
+          top: top,
           right: 10,
           backgroundColor: color,
           color: 'white',
@@ -32,8 +32,13 @@ export function PriceStamp({color, price}) {
           },
         }}
       >
-        <Typography variant="subtitle1" fontWeight="bold">
-          {price}
+        <Typography variant="subtitle1" fontWeight="bold" sx={{textAlign: 'center', lineHeight: 0.8}}>
+          {price ?
+            price :
+            <>
+              coming<br/>soon
+            </>
+          }
         </Typography>
       </Box>
     </>

@@ -9,6 +9,7 @@ export function Haaschen({plugin_link}) {
     <>
       <Box sx={{position: 'relative', marginBottom: '30px'}}>
         <PriceStamp
+          top={10}
           color={'#f50057'}
           price={'FREE'}
         />

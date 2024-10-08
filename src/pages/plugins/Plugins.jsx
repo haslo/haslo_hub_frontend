@@ -7,11 +7,48 @@ import {Destruktor} from "./Destruktor";
 import {Haaschen} from "./Haaschen";
 import {Ploink} from "./Ploink";
 import {PluginHero} from "./PluginHero";
+import {TinyHaas} from "./TinyHaas";
+import {BfgCompressor} from "./BfgCompressor";
 
 export function Plugins() {
   return (
     <>
       <Container fixed style={{marginTop: '40px', marginBottom: '100px'}}>
+        <Grid container spacing={1} rowSpacing={1}>
+          <PluginHero
+            hero_title={"Upcoming Plugins"}
+            hero_content={
+              <>
+                When I'm doing something, I'm doing it fanatically. Right now, I'm fanatically going deep with DSP
+                and plugin building. Check out <a href={"https://github.com/haslo/haslo_plugin_refs"}>
+                  the references I'm using in this GitHub repo
+                </a>.
+                <br/><br/>
+                All of this is coming soon! Watch this space 😅
+              </>
+            }
+          />
+        </Grid>
+        <Grid container spacing={3} rowSpacing={2}>
+          <PluginCard
+            avatar_name={"Audio FX Plugin"}
+            avatar_image_url={"/assets/haslo_logo.png"}
+            avatar_link={null}
+            plugin_title={"tinyHaas"}
+            card_subheader={"For all DAWs"}
+            plugin_link={null}
+            plugin_content={<TinyHaas plugin_title={null}/>}
+          />
+          <PluginCard
+            avatar_name={"Audio FX Plugin"}
+            avatar_image_url={"/assets/haslo_logo.png"}
+            avatar_link={null}
+            plugin_title={"BFG Compressor"}
+            card_subheader={"For all DAWs"}
+            plugin_link={null}
+            plugin_content={<BfgCompressor plugin_link={null}/>}
+          />
+        </Grid>
         <Grid container spacing={1} rowSpacing={1}>
           <PluginHero
             hero_title={"Voltage Modular / Legacy"}
@@ -20,10 +57,7 @@ export function Plugins() {
                 I've created these plugins a while ago. Years, in fact.
                 Most of them were finished in December 2020, and released in early 2021.
                 <br/><br/>
-                Consider this page to be a bit of a placeholder. The modules still work of course! But I have many
-                fancier things planned, including a revamped and improved and extended DAW plugin version of DeSTRuKTor.
-                <br/><br/>
-                Watch this space 😅
+                The modules still work of course! So have fun!
               </>
             }
           />
