@@ -15,7 +15,7 @@ export function TinyHaas({plugin_link}) {
         />
       </Box>
       <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
-        Like Häaschen, But Multiband And VST3
+        Like HÄÄSchen, But Multiband And VST3
       </Typography>
       <Typography variant="body2" color="text.secondary">
         If you don't know what HÄÄSchen is, it's a Voltage Modular module I built a while ago.
