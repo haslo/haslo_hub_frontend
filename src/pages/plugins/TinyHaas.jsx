@@ -11,18 +11,19 @@ export function TinyHaas({plugin_link}) {
         <PriceStamp
           top={-60}
           color={'#f50057'}
-          price={'FREE'}
+          price={null}
         />
       </Box>
       <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
         Like HÄÄSchen, but multiband and VST3
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        Ploink is a trigger / gate module that generates a series of triggers or gates out of one incoming trigger. Each
-        trigger goes faster and faster, until the minimum length is reached and the sequence of triggers / gates stops.
+        If you don't know what HÄÄSchen is, it's a Voltage Modular module I built a while ago.
+        It's just a Haas effect, where one of the channels is delayed by a very short delay time
+        and adds the impression of width.
         <br/><br/>
-        <strong>This module does not generate sound.</strong> You can use the gates for an envelope, or the triggers for
-        advancing a sequence, as a sync signal for sample&hold modules, that kind of thing.
+        This version will be a bit more ambitious and will add multiband processing (which <em>will</em> lead to
+        phasing effects, that's the whole point of that) and in-plugin modulation.
       </Typography>
     </>
   );

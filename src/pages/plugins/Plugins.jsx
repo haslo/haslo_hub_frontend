@@ -19,9 +19,12 @@ export function Plugins() {
             hero_title={"Upcoming Plugins"}
             hero_content={
               <>
-                Consider this page to be a bit of a placeholder. I'm building my DSP library and the first plugins.
+                When I'm doing something, I'm doing it fanatically. Right now, I'm fanatically going deep with DSP
+                and plugin building. Check out <a href={"https://github.com/haslo/haslo_plugin_refs"}>
+                  the references I'm using in this GitHub repo
+                </a>.
                 <br/><br/>
-                But I have many fancier things planned, too! Watch this space 😅
+                All of this is coming soon! Watch this space 😅
               </>
             }
           />

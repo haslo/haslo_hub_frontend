@@ -11,18 +11,18 @@ export function BfgCompressor({plugin_link}) {
         <PriceStamp
           top={-60}
           color={'#243667'}
-          price={'TBD'}
+          price={null}
         />
       </Box>
       <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
         Extreme multiband upward compression
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        Ploink is a trigger / gate module that generates a series of triggers or gates out of one incoming trigger. Each
-        trigger goes faster and faster, until the minimum length is reached and the sequence of triggers / gates stops.
+        You've heard this sound before. You've seen similar plugins before. This one will add a unique twist to the
+        "extreme upward compression" game, with added distortion and wavefolding.
         <br/><br/>
-        <strong>This module does not generate sound.</strong> You can use the gates for an envelope, or the triggers for
-        advancing a sequence, as a sync signal for sample&hold modules, that kind of thing.
+        I'm using some algorithms from DeSTRuKTor here, but add oversampling and generally better DSP (as enabled by
+        using C++ rather than Java in the background)... 🤓
       </Typography>
     </>
   );

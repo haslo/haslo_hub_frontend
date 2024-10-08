@@ -32,8 +32,13 @@ export function PriceStamp({color, price, top}) {
           },
         }}
       >
-        <Typography variant="subtitle1" fontWeight="bold">
-          {price}
+        <Typography variant="subtitle1" fontWeight="bold" sx={{textAlign: 'center', lineHeight: 0.8}}>
+          {price ?
+            price :
+            <>
+              coming<br/>soon
+            </>
+          }
         </Typography>
       </Box>
     </>
