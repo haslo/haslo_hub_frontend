@@ -10,7 +10,7 @@ export function PrivacyNotice() {
       <Container fixed style={{marginTop: '40px', marginBottom: '100px'}}>
         <Grid container spacing={1} rowSpacing={1}>
           <HeroBox
-            hero_title={"Privacy Policy"}
+            hero_title={"Privacy Notice"}
             hero_content={
               <>
                 Privacy blabla

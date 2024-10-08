@@ -11,7 +11,8 @@ import {Haaschen} from "./Haaschen";
 import {Ploink} from "./Ploink";
 import {Destruktor} from "./Destruktor";
 
-export function Plugins() {
+export function Plugins({searchQuery}) {
+  // TODO eventually use search query
   return (
     <>
       <Container fixed style={{marginTop: '40px', marginBottom: '100px'}}>
