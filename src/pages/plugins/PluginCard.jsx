@@ -17,16 +17,22 @@ export function PluginCard({avatar_name, avatar_image_url, avatar_link, plugin_t
         <Card sx={{paddingX: 1, marginBottom: '15px'}}>
           <CardHeader
             avatar={
-              <a href={avatar_link} name={avatar_name}>
+              avatar_link ?
+                <a href={avatar_link} name={avatar_name}>
+                  <Avatar variant="rounded" alt={avatar_name} src={avatar_image_url}/>
+                </a> :
                 <Avatar variant="rounded" alt={avatar_name} src={avatar_image_url}/>
-              </a>
             }
             title={
-              <a href={plugin_link} name={plugin_title} className={"plugin_card"}>
+              avatar_link ?
+                <a href={plugin_link} name={plugin_title} className={"plugin_card"}>
+                  <Typography variant='h4'>
+                    {plugin_title}
+                  </Typography>
+                </a> :
                 <Typography variant='h4'>
                   {plugin_title}
                 </Typography>
-              </a>
             }
             subheader={card_subheader}
           />

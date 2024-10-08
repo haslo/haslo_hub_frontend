@@ -14,20 +14,47 @@ export function Plugins() {
       <Container fixed style={{marginTop: '40px', marginBottom: '100px'}}>
         <Grid container spacing={1} rowSpacing={1}>
           <PluginHero
+            hero_title={"Upcoming Plugins"}
+            hero_content={
+              <>
+                Consider this page to be a bit of a placeholder. I'm building my DSP library and the first plugins.
+                <br/><br/>
+                But I have many fancier things planned, too! Watch this space 😅
+              </>
+            }
+          />
+        </Grid>
+        <Grid container spacing={1} rowSpacing={1}>
+          <PluginHero
             hero_title={"Voltage Modular / Legacy"}
             hero_content={
               <>
                 I've created these plugins a while ago. Years, in fact.
                 Most of them were finished in December 2020, and released in early 2021.
                 <br/><br/>
-                Consider this page to be a bit of a placeholder. The modules still work of course! But I have many
-                fancier things planned, including a revamped and improved and extended DAW plugin version of DeSTRuKTor.
-                <br/><br/>
-                Watch this space 😅
+                The modules still work of course! So have fun!
               </>
             }
           />
         </Grid>
+        <PluginCard
+          avatar_name={"Audio FX Plugin"}
+          avatar_image_url={"/assets/haslo_logo.png"}
+          avatar_link={null}
+          plugin_title={"tinyHaas"}
+          card_subheader={null}
+          plugin_link={"https://store.cherryaudio.com/modules/ploink"}
+          plugin_content={"asdf"}
+        />
+        <PluginCard
+          avatar_name={"Audio FX Plugin"}
+          avatar_image_url={"/assets/haslo_logo.png"}
+          avatar_link={null}
+          plugin_title={"BFG Compressor"}
+          card_subheader={null}
+          plugin_link={"https://store.cherryaudio.com/modules/ploink"}
+          plugin_content={"asdf"}
+        />
         <Grid container spacing={3} rowSpacing={2}>
           <PluginCard
             avatar_name={"Voltage Modular Module"}
