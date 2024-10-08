@@ -57,9 +57,7 @@ export function TermsOfService() {
                   terms of service.
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  c. Refunds and Cancellations: Our refund policy aligns with the policies of our sales channels. For
-                  Cherry Audio purchases, please refer to their refund policy. For future direct sales, our refund
-                  policy will be [insert your refund policy].
+                  c. Refunds and Cancellations: Please refer to <a href={"/refunds"}>our Refund Policy</a>.
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                   4. User Accounts

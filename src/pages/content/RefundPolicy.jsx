@@ -47,9 +47,9 @@ export function RefundPolicy() {
                 <Typography variant="body1" paragraph>
                   <ul>
                     <li>These purchases are subject to Cherry Audio's refund policy.</li>
-                    <li>Please refer to Cherry Audio's official refund policy at: <Link
+                    <li>Please refer to Cherry Audio's official <Link
                       href="https://cherryaudio.kayako.com/article/508-what-is-cherry-audio-s-refund-policy"
-                      target="_blank" rel="noopener noreferrer">https://cherryaudio.com/privacy</Link></li>
+                       rel="noopener noreferrer">refund policy in their FAQ</Link></li>
                     <li>For refund requests on these products, please contact Cherry Audio's customer support directly.
                     </li>
                   </ul>
