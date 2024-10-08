@@ -80,8 +80,8 @@ export function TermsOfService() {
                   6. Links To Other Web Sites
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  Our Service may contain links to third-party websites or services that are not owned or controlled by
-                  <strong>haslo's Plugins</strong>. We have no control over, and assume no responsibility for, the
+                  Our Service may contain links to third-party websites or services that are not owned or controlled
+                  by <strong>haslo's Plugins</strong>. We have no control over, and assume no responsibility for, the
                   content, privacy
                   policies, or practices of any third-party websites or services.
                 </Typography>
