@@ -15,7 +15,7 @@ export function BfgCompressor({plugin_link}) {
         />
       </Box>
       <Typography variant="h5" color="text.secondary" sx={{marginBottom: '10px'}}>
-        Extreme multiband upward compression
+        Extreme Multiband Upward Compression
       </Typography>
       <Typography variant="body2" color="text.secondary">
         You've heard this sound before. You've seen similar plugins before. This one will add a unique twist to the
