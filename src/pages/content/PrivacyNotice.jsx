@@ -26,6 +26,9 @@ export function PrivacyNotice() {
                   <ul>
                     <li>Google Analytics 4 (GA4): We use GA4 to analyze website traffic and user behavior.</li>
                     <li>Google Tag Manager (GTM): GTM helps us manage and deploy marketing tags on our website.</li>
+                    <li>Google Ads: We use Google Ads for advertising purposes, which may collect data about your
+                      interactions with our ads.
+                    </li>
                     <li>SoundCloud: We embed SoundCloud content, which may use cookies to enhance your experience.</li>
                     <li>Newsletter Subscription: If you opt-in to our newsletter, we collect your email address.</li>
                   </ul>
@@ -37,6 +40,7 @@ export function PrivacyNotice() {
                   <ul>
                     <li>To analyze and improve our website's performance and user experience.</li>
                     <li>To provide personalized content and advertisements.</li>
+                    <li>To measure the effectiveness of our advertising campaigns.</li>
                     <li>To send you our newsletter if you've subscribed.</li>
                     <li>To process and communicate with you about purchases, if applicable.</li>
                   </ul>
@@ -47,7 +51,9 @@ export function PrivacyNotice() {
                 <Typography variant="body1" paragraph>
                   We may share data with:
                   <ul>
-                    <li>Google: For analytics and marketing purposes.</li>
+                    <li>Google: For analytics, marketing, and advertising purposes, including through Google Analytics,
+                      Google Tag Manager, and Google Ads.
+                    </li>
                     <li>SoundCloud: When you interact with embedded SoundCloud content.</li>
                     <li>Other third-party service providers necessary for our website operations.</li>
                   </ul>
