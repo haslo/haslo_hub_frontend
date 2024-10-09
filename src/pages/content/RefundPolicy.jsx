@@ -28,10 +28,10 @@ export function RefundPolicy() {
                 </Typography>
                 <Typography variant="body1" paragraph>
                   <ul>
-                    <li>We offer a 14-day, no questions asked refund policy.</li>
+                    <li>We offer a 30-day, no questions asked refund policy.</li>
                     <li>The refund period starts from the date of purchase.</li>
                     <li>To request a refund, please contact us at <a
-                      href="mailto:haslo@haslo.ch">haslo@haslo.ch</a> within the 14-day period.
+                      href="mailto:haslo@haslo.ch">haslo@haslo.ch</a> within the 30-day period.
                     </li>
                     <li>Once we receive your request, we will process the refund within 5-10 business days.</li>
                     <li>The refund will be issued using the original payment method.</li>
