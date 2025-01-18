@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {ThemeProvider} from "@mui/material";
 import {createTheme} from '@mui/material/styles';
 
+import {RedirectWrapper} from "./shared/RedirectWrapper";
 import {SearchAppBar} from "./shared/SearchAppBar";
 import {BottomBar} from "./shared/BottomBar";
 import {NavButtons} from "./shared/NavButtons";
@@ -39,49 +40,51 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <ThemeProvider theme={theme}>
-          <SearchAppBar
-            setSearchQuery={setSearchQuery}
-            searchEventSent={searchEventSent}
-            setSearchEventSent={setSearchEventSent}
-          />
-          <NavButtons/>
-          <Routes>
-            <Route path="/" element={
-              <Music
-                searchQuery={searchQuery}
-              />
-            }/>
-            <Route path="/plugins" element={
-              <Plugins
-                searchQuery={searchQuery}
-              />
-            }/>
-            <Route path="/tos" element={
-              <TermsOfService
-                searchQuery={searchQuery}
-              />
-            }/>
-            <Route path="/impressum" element={
-              <Impressum
-                searchQuery={searchQuery}
-              />
-            }/>
-            <Route path="/privacy" element={
-              <PrivacyNotice
-                searchQuery={searchQuery}
-              />
-            }/>
-            <Route path="/refunds" element={
-              <RefundPolicy
-                searchQuery={searchQuery}
-              />
-            }/>
-          </Routes>
-          <BottomBar/>
-        </ThemeProvider>
-      </div>
+      <RedirectWrapper>
+        <div className="App">
+          <ThemeProvider theme={theme}>
+            <SearchAppBar
+              setSearchQuery={setSearchQuery}
+              searchEventSent={searchEventSent}
+              setSearchEventSent={setSearchEventSent}
+            />
+            <NavButtons/>
+            <Routes>
+              <Route path="/" element={
+                <Music
+                  searchQuery={searchQuery}
+                />
+              }/>
+              <Route path="/plugins" element={
+                <Plugins
+                  searchQuery={searchQuery}
+                />
+              }/>
+              <Route path="/tos" element={
+                <TermsOfService
+                  searchQuery={searchQuery}
+                />
+              }/>
+              <Route path="/impressum" element={
+                <Impressum
+                  searchQuery={searchQuery}
+                />
+              }/>
+              <Route path="/privacy" element={
+                <PrivacyNotice
+                  searchQuery={searchQuery}
+                />
+              }/>
+              <Route path="/refunds" element={
+                <RefundPolicy
+                  searchQuery={searchQuery}
+                />
+              }/>
+            </Routes>
+            <BottomBar/>
+          </ThemeProvider>
+        </div>
+      </RedirectWrapper>
     </Router>
   );
 }
