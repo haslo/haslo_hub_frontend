@@ -1,6 +1,6 @@
 {
-  "short_name": "haslo.ch",
-  "name": "haslo.ch - Techno & Music",
+  "short_name": "CyberGwen.com",
+  "name": "CyberGwen.com - Techno & Music",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ff00ff",
+  "background_color": "#000000"
 }
