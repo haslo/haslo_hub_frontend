@@ -68,7 +68,7 @@ export function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSen
             sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'}}}
           >
             <a href='/' style={{textDecoration: 'none', color: 'white'}}>
-              CyberGwen.com - Techno and Plugins from Bern, Switzerland
+              CyberGwen.com | haslo.ch - Techno and Plugins from Bern, Switzerland
             </a>
           </Typography>
           {searchIsPending ? <CircularProgress/> : <></>}
