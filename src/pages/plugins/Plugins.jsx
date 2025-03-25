@@ -18,41 +18,6 @@ export function Plugins({searchQuery}) {
       <Container fixed style={{marginTop: '40px', marginBottom: '100px'}}>
         <Grid container spacing={1} rowSpacing={1}>
           <HeroBox
-            hero_title={"Upcoming Plugins"}
-            hero_content={
-              <>
-                When I'm doing something, I'm doing it fanatically. Right now, I'm fanatically going deep with DSP
-                and plugin building. Check out <a href={"https://github.com/haslo/haslo_plugin_refs"}>
-                  the references I'm using in this GitHub repo
-                </a>.
-                <br/><br/>
-                All of this is coming soon! Watch this space 😅
-              </>
-            }
-          />
-        </Grid>
-        <Grid container spacing={3} rowSpacing={2}>
-          <PluginCard
-            avatar_name={"Audio FX Plugin"}
-            avatar_image_url={"/assets/haslo_logo.png"}
-            avatar_link={null}
-            plugin_title={"tinyHaas"}
-            card_subheader={"For all DAWs"}
-            plugin_link={null}
-            plugin_content={<TinyHaas plugin_title={null}/>}
-          />
-          <PluginCard
-            avatar_name={"Audio FX Plugin"}
-            avatar_image_url={"/assets/haslo_logo.png"}
-            avatar_link={null}
-            plugin_title={"BFG Compressor"}
-            card_subheader={"For all DAWs"}
-            plugin_link={null}
-            plugin_content={<BfgCompressor plugin_link={null}/>}
-          />
-        </Grid>
-        <Grid container spacing={1} rowSpacing={1}>
-          <HeroBox
             hero_title={"Voltage Modular / Legacy"}
             hero_content={
               <>
@@ -91,6 +56,39 @@ export function Plugins({searchQuery}) {
             card_subheader={"for Voltage Modular"}
             plugin_link={"https://store.cherryaudio.com/modules/destruktor"}
             plugin_content={<Destruktor plugin_link={"https://store.cherryaudio.com/modules/destruktor"}/>}
+          />
+        </Grid>
+        <Grid container spacing={1} rowSpacing={1}>
+          <HeroBox
+            hero_title={"Upcoming Plugins"}
+            hero_content={
+              <>
+                My interest in plugins has waned a bit, I'm currently pursuing other things. So it'll be a while
+                before I dive deep here again. Check out <a href={"https://github.com/haslo/haslo_plugin_refs"}>
+                the references I'm using in this GitHub repo
+              </a>.
+              </>
+            }
+          />
+        </Grid>
+        <Grid container spacing={3} rowSpacing={2}>
+          <PluginCard
+            avatar_name={"Audio FX Plugin"}
+            avatar_image_url={"/assets/haslo_logo.png"}
+            avatar_link={null}
+            plugin_title={"tinyHaas"}
+            card_subheader={"For all DAWs"}
+            plugin_link={null}
+            plugin_content={<TinyHaas plugin_title={null}/>}
+          />
+          <PluginCard
+            avatar_name={"Audio FX Plugin"}
+            avatar_image_url={"/assets/haslo_logo.png"}
+            avatar_link={null}
+            plugin_title={"BFG Compressor"}
+            card_subheader={"For all DAWs"}
+            plugin_link={null}
+            plugin_content={<BfgCompressor plugin_link={null}/>}
           />
         </Grid>
       </Container>

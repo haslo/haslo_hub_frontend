@@ -36,7 +36,7 @@ export function PriceStamp({color, price, top}) {
           {price ?
             price :
             <>
-              coming<br/>soon
+              coming<br/>soon-ish
             </>
           }
         </Typography>
