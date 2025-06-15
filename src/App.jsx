@@ -42,6 +42,7 @@ function App() {
     <Router>
       <RedirectWrapper>
         <div className="App">
+          <a rel="me" href="https://social.bitwig.community/@cybergwen" style={{display: "none"}}>Mastodon self link</a>
           <ThemeProvider theme={theme}>
             <SearchAppBar
               setSearchQuery={setSearchQuery}
