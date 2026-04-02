@@ -41,7 +41,7 @@ export function MusicPostCard({newsPost}) {
             <CardMedia
               component="img"
               height={(newsPost.type.channelDescription === "YouTube") ? "194" : "250"}
-              image={newsPost.thumbnailImage.url + '?fm=webp'}
+              image={newsPost.thumbnailImage.url}
               alt={newsPost.shortTitle}
             />
             <Box

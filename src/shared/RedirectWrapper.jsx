@@ -6,10 +6,13 @@ export const RedirectWrapper = ({children}) => {
   const currentHostname = window.location.hostname;
   const currentProtocol = window.location.protocol;
 
+  const isLocal = currentHostname === 'localhost' || currentHostname === '127.0.0.1';
   const hasloRoutes = ['/plugins', '/tos', '/impressum', '/privacy', '/refunds'];
   const shouldBeOnHaslo = hasloRoutes.some(route => location.pathname.startsWith(route));
 
   useEffect(() => {
+    if (isLocal) return;
+
     if (currentHostname === 'cybergwen.com' && !shouldBeOnHaslo) {
       return;
     }
@@ -23,9 +26,10 @@ export const RedirectWrapper = ({children}) => {
 
     const redirectUrl = `${baseUrl}${location.pathname}${location.search}${location.hash}`;
     window.location.replace(redirectUrl);
-  }, [currentHostname, location, shouldBeOnHaslo]);
+  }, [currentHostname, location, shouldBeOnHaslo, isLocal]);
 
-  if ((currentHostname === 'cybergwen.com' && !shouldBeOnHaslo) ||
+  if (isLocal ||
+    (currentHostname === 'cybergwen.com' && !shouldBeOnHaslo) ||
     (currentHostname === 'haslo.ch' && shouldBeOnHaslo)) {
     return children;
   }
