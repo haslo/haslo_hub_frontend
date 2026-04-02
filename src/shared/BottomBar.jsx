@@ -1,54 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {Avatar, Box, List, ListItem, Typography} from "@mui/material";
+import newsPostTypes from "../data/newsPostTypes.json";
 
 export function BottomBar() {
-  const [newsPostTypes, setNewsPostTypes] = useState([]);
-
-  useEffect(() => {
-    const query = `
-    {
-      newsPostTypeCollection(order: [sortOrder_ASC], limit: 1000) {
-        items {
-          title
-          channelDescription
-          channelTitle
-          channelUrl
-          icon {
-            contentType
-            url
-          }
-          sys {
-            id
-          }
-        }
-      }
-    }
-    `;
-    const fetchGraphQlData = (query, retries) => {
-      window
-        .fetch(`https://graphql.contentful.com/content/v1/spaces/wehngbocf979/`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer ck9CqB4ydwUdbKGF6quZzIqVS0JvmlMhWQJnFSnODrA",
-          },
-          body: JSON.stringify({query}),
-        })
-        .then((response) => response.json())
-        .then(({data, errors}) => {
-          if (errors) {
-            if (retries < 5) {
-              setTimeout(() => {
-                fetchGraphQlData(query, retries + 1);
-              }, 1000);
-            }
-          } else {
-            setNewsPostTypes(data.newsPostTypeCollection.items);
-          }
-        });
-    };
-    fetchGraphQlData(query, 0);
-  }, []);
 
   const flexContainer = {
     display: "flex",
