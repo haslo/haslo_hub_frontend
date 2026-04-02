@@ -67,7 +67,7 @@ export function SearchAppBar({setSearchQuery, searchEventSent, setSearchEventSen
             component="div"
             sx={{flexGrow: 1, display: {xs: 'block', sm: 'block'}}}
           >
-            <a href='/' style={{textDecoration: 'none', color: 'white'}}>
+            <a href={window.location.hostname === 'haslo.ch' ? 'https://cybergwen.com/' : '/'} style={{textDecoration: 'none', color: 'white'}}>
               CyberGwen.com | haslo.ch - Techno and Plugins from Bern, Switzerland
             </a>
           </Typography>
